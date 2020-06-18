@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="以最纯粹的热爱，走最漫长的路">
+<meta name="description" content="将文件夹制作成 Custom Package 在文件夹下新建 package.json 文件  按照格式填写 json 中的各项属性值   1234567891011&amp;#123;    &quot;name&quot;: &quot;com.zyq.scenesplit&quot;,    &quot;displayName&quot;: &quot;SceneSplit&quot;,    &quot;description&quot;: &quot;基于 KDTree 的场景分割工具&quot;,    &quot;ve">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PackageManager Custom Pack 开发注意事项">
-<meta property="og:url" content="http://yoursite.com/2020/06/17/testpaper/index.html">
+<meta property="og:title" content="Custom Package 开发注意事项">
+<meta property="og:url" content="http://yoursite.com/2020/06/17/PackageManagerCustomPack/index.html">
 <meta property="og:site_name" content="OKZKX">
-<meta property="og:description" content="以最纯粹的热爱，走最漫长的路">
+<meta property="og:description" content="将文件夹制作成 Custom Package 在文件夹下新建 package.json 文件  按照格式填写 json 中的各项属性值   1234567891011&amp;#123;    &quot;name&quot;: &quot;com.zyq.scenesplit&quot;,    &quot;displayName&quot;: &quot;SceneSplit&quot;,    &quot;description&quot;: &quot;基于 KDTree 的场景分割工具&quot;,    &quot;ve">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-06-17T03:27:55.000Z">
-<meta property="article:modified_time" content="2020-06-17T08:17:31.808Z">
+<meta property="article:modified_time" content="2020-06-18T06:04:31.960Z">
 <meta property="article:author" content="MEZKX">
 <meta property="article:tag" content="Unity PackageManager">
 <meta name="twitter:card" content="summary">
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/06/17/testpaper/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/06/17/PackageManagerCustomPack/"/>
 
 
 
 
 
-  <title>PackageManager Custom Pack 开发注意事项 | OKZKX</title>
+  <title>Custom Package 开发注意事项 | OKZKX</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/17/testpaper/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/17/PackageManagerCustomPack/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="MEZKX">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">PackageManager Custom Pack 开发注意事项</h1>
+          <h1 class="post-title" itemprop="name headline">Custom Package 开发注意事项</h1>
         
 
         <div class="post-meta">
@@ -352,7 +352,53 @@
       
 
       
-        
+        <h2 id="将文件夹制作成-Custom-Package"><a href="#将文件夹制作成-Custom-Package" class="headerlink" title="将文件夹制作成 Custom Package"></a>将文件夹制作成 Custom Package</h2><ol>
+<li><p>在文件夹下新建 package.json 文件</p>
+</li>
+<li><p>按照格式填写 json 中的各项属性值</p>
+</li>
+</ol>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"name"</span>: <span class="string">"com.zyq.scenesplit"</span>,</span><br><span class="line">    <span class="attr">"displayName"</span>: <span class="string">"SceneSplit"</span>,</span><br><span class="line">    <span class="attr">"description"</span>: <span class="string">"基于 KDTree 的场景分割工具"</span>,</span><br><span class="line">    <span class="attr">"version"</span>: <span class="string">"1.0.1"</span>,</span><br><span class="line">    <span class="attr">"unity"</span>: <span class="string">"2019.3"</span>,</span><br><span class="line">    <span class="attr">"license"</span>: <span class="string">"MIT"</span>,</span><br><span class="line">    <span class="attr">"dependencies"</span>: &#123;</span><br><span class="line">        <span class="attr">"com.whinarn.unitymeshsimplifier"</span>: <span class="string">"2.3.3"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>大功告成</p>
+<p>现在这个文件夹下的所有内容就在一个 Custom Package 中了，</p>
+<h2 id="导入-Custorm-Package"><a href="#导入-Custorm-Package" class="headerlink" title="导入 Custorm Package"></a>导入 Custorm Package</h2><h4 id="两种操作："><a href="#两种操作：" class="headerlink" title="两种操作："></a>两种操作：</h4><ol>
+<li>使用 Package Manager 进行操作</li>
+<li>直接修改 /Packages/manifest.json </li>
+</ol>
+<p>实际上操作 1 的结果也是修改 manifest.json </p>
+<h4 id="导入方式"><a href="#导入方式" class="headerlink" title="导入方式"></a>导入方式</h4><ol>
+<li><p>拖入文件夹导入</p>
+<p>直接将 Custom Package 文件夹拖入 /Packages/，与 manifest.json 同一目录，Unity 将自动导入</p>
+<p>其他方式都是 修改 manifest ，或者直接用 PackageManager。</p>
+</li>
+<li><p>指定文件夹导入</p>
+<p><code>&quot;com.unity.entities&quot;: &quot;file.//com.unity.entities@0.5.1-preview.11&quot;,</code></p>
+<p>使用绝对或者相对路径指定 Custom Package 文件夹</p>
+</li>
+<li><p>指定 git 地址导入</p>
+<p><code>&quot;com.zyq.phonemove&quot;: &quot;http://git.tube/zengkaixiang/phonemove.git&quot;,</code></p>
+</li>
+<li><p>官方平台导入</p>
+<p><code>&quot;com.unity.modules.ai&quot;: &quot;1.0.0&quot;,</code></p>
+<p>如果包名在官方的库中存在，指定版本号即可直接从官方处下载。</p>
+</li>
+</ol>
+<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><ol>
+<li><p>不可修改导入的包的内部文件、</p>
+<p>以引用的方式导入包，不是以拷贝的方式导入包。</p>
+<p>所以不可修改包内文件，会导致原始的包一起变动。</p>
+<p>如果是非本地导入，倒是影响不大，毕竟不会影响到远端。</p>
+<p>单如果 manifist 更新将会刷新全部包体信息，如又修改将会重新下载。</p>
+</li>
+<li><p>包体依赖</p>
+<p>package dependencies 可以指定包体的依赖，如果项目中不存在对应的依赖包名，该 CustomPackage 将会报错。如果包名是官方包，将会自动下载对应包体。</p>
+</li>
+<li><p>包内依赖</p>
+<p>包内一般 Editor Assembly 依赖于 Runtime Assembly，有些 Assembly 会依赖于外部 Assembly。Assembly 依赖不能选择依赖于 GUID，因为换项目后，GUID 会变化，Assembly name 不会。</p>
+</li>
+</ol>
+
       
     </div>
     
@@ -382,8 +428,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/06/16/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8B%E8%B7%AF-%E5%9F%BA%E7%A1%80%E7%AF%87/" rel="next" title="从零开始的博客搭建之路-基础篇">
-                <i class="fa fa-chevron-left"></i> 从零开始的博客搭建之路-基础篇
+              <a href="/2020/06/16/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-%E5%9F%BA%E7%A1%80%E7%AF%87/" rel="next" title="搭建个人博客-基础篇">
+                <i class="fa fa-chevron-left"></i> 搭建个人博客-基础篇
               </a>
             
           </div>
@@ -446,8 +492,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -511,6 +566,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#将文件夹制作成-Custom-Package"><span class="nav-number">1.</span> <span class="nav-text">将文件夹制作成 Custom Package</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#导入-Custorm-Package"><span class="nav-number">2.</span> <span class="nav-text">导入 Custorm Package</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#两种操作："><span class="nav-number">2.0.1.</span> <span class="nav-text">两种操作：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#导入方式"><span class="nav-number">2.0.2.</span> <span class="nav-text">导入方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注意事项"><span class="nav-number">2.0.3.</span> <span class="nav-text">注意事项</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
