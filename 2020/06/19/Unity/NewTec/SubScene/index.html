@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="SubScene1. 资料PaperStreaming Open World In ECS Framework - Unity Mega City - 叶磊 Projectsunite2019-scenedatatodots VideosConverting scene data to DOTS - Unite Copenhagen ArchiveGame Object Conversion an">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SubScene">
+<meta property="og:url" content="http://yoursite.com/2020/06/19/Unity/NewTec/SubScene/index.html">
+<meta property="og:site_name" content="OKZKX">
+<meta property="og:description" content="SubScene1. 资料PaperStreaming Open World In ECS Framework - Unity Mega City - 叶磊 Projectsunite2019-scenedatatodots VideosConverting scene data to DOTS - Unite Copenhagen ArchiveGame Object Conversion an">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/okzkx/Images/master/s_1715D091BF62C8442D9F5B2E8B3BAF259CD63CD3BE88A4C71861E0CFCBB9F775_1585273525263_image.png">
+<meta property="article:published_time" content="2020-06-19T02:00:05.000Z">
+<meta property="article:modified_time" content="2020-06-19T10:29:55.021Z">
+<meta property="article:author" content="MEZKX">
+<meta property="article:tag" content="Unity">
+<meta property="article:tag" content="Graphic">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/okzkx/Images/master/s_1715D091BF62C8442D9F5B2E8B3BAF259CD63CD3BE88A4C71861E0CFCBB9F775_1585273525263_image.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/06/19/Unity/NewTec/SubScene/"/>
+
+
+
+
+
+  <title>SubScene | OKZKX</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">OKZKX</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">以最纯粹的热爱，走最漫长的路</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/index.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/19/Unity/NewTec/SubScene/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MEZKX">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://thirdqq.qlogo.cn/g?b=oidb&k=UblQCjyCbtfo4c3aTko4IQ&s=100&t=1582812597">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="OKZKX">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">SubScene</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-19T10:00:05+08:00">
+                2020-06-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Unity/" itemprop="url" rel="index">
+                    <span itemprop="name">Unity</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="SubScene"><a href="#SubScene" class="headerlink" title="SubScene"></a>SubScene</h1><h2 id="1-资料"><a href="#1-资料" class="headerlink" title="1. 资料"></a>1. 资料</h2><h4 id="Paper"><a href="#Paper" class="headerlink" title="Paper"></a>Paper</h4><p><a href="https://paper.dropbox.com/doc/Streaming-Open-World-In-ECS-Framework-Unity-Mega-City-yjzRKhpu0iaLRmYKaTbfq" target="_blank" rel="noopener">Streaming Open World In ECS Framework - Unity Mega City - 叶磊</a></p>
+<h4 id="Projects"><a href="#Projects" class="headerlink" title="Projects"></a>Projects</h4><p><a href="https://github.com/Unity-Technologies/unite2019-scenedatatodots" target="_blank" rel="noopener">unite2019-scenedatatodots</a></p>
+<h4 id="Videos"><a href="#Videos" class="headerlink" title="Videos"></a>Videos</h4><p><a href="https://www.youtube.com/watch?v=TdlhTrq1oYk&list=PLX2vGYjWbI0S1wHRTyDiPtKLEPTWFi4cd&index=9" target="_blank" rel="noopener">Converting scene data to DOTS - Unite Copenhagen</a></p>
+<h4 id="Archive"><a href="#Archive" class="headerlink" title="Archive"></a>Archive</h4><p><a href="https://gametorrahod.com/game-object-conversion-and-subscene/" target="_blank" rel="noopener">Game Object Conversion and SubScene</a></p>
+<p><a href="https://blog.csdn.net/qq_30137245/article/details/99071697#ECS_136" target="_blank" rel="noopener">ECS系列目录</a></p>
+<h2 id="2-SubScene-源码分析"><a href="#2-SubScene-源码分析" class="headerlink" title="2. SubScene 源码分析"></a>2. SubScene 源码分析</h2><h3 id="SceneSystem"><a href="#SceneSystem" class="headerlink" title="SceneSystem"></a>SceneSystem</h3><p>子场景加载卸载 API 的统一入口</p>
+<p>使用方式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var sceneSystem &#x3D; world.GetExistingSystem&lt;SceneSystem&gt;();</span><br><span class="line">sceneSystem.LoadSceneAsync() &#x2F;&#x2F; 加载场景</span><br><span class="line">sceneSystem.UnloadScene() &#x2F;&#x2F; 卸载场景</span><br><span class="line">SceneSystem.LoadSceneAsync()&#123;</span><br><span class="line">    sceneEntity &#x3D; CreateSceneEntity()</span><br><span class="line">    AddComponent(SceneReference,sceneEntity)</span><br><span class="line">    AddComponent(RequestSceneLoaded,sceneEntity)</span><br><span class="line">	return sceneEntity</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="SubScene-cs"><a href="#SubScene-cs" class="headerlink" title="SubScene.cs"></a>SubScene.cs</h3><p>子场景脚本, 子场景的操作入口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 在脚本参数受到修改后</span><br><span class="line">OnValidate&#123;</span><br><span class="line">      &#x2F;&#x2F; 获取 SceneSystem 并使用其创建 sceneEntity 实体</span><br><span class="line">      AddSceneEntities&#123;</span><br><span class="line">        var sceneEntity &#x3D; sceneSystem.LoadSceneAsync(_SceneGUID, loadParams);</span><br><span class="line">        AddComponent(this,sceneEntity)</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="ResolveSceneReferenceSystem"><a href="#ResolveSceneReferenceSystem" class="headerlink" title="ResolveSceneReferenceSystem"></a>ResolveSceneReferenceSystem</h3><p>对 SceneReference 组件的处理</p>
+<ol>
+<li>加载子场景二进制数据</li>
+<li>根据数据创建多个 SceneSection </li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">OnUpdate&#123;</span><br><span class="line"></span><br><span class="line">sceneEntity.ForEach&#123;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 取得 ArtifactHash</span><br><span class="line"></span><br><span class="line">artifactHash &#x3D; GetSubSceneArtifactHash&#123;</span><br><span class="line"></span><br><span class="line"> &#x2F;&#x2F;ArtifactHash (本地资源hash?) &#x3D; SceneWithBuildSettingsGUIDs + 一些资源导入的设置</span><br><span class="line"></span><br><span class="line"> SceneWithBuildSettingsGUIDs &#x3D; CreateBuildSettingSceneFile&#123;</span><br><span class="line"></span><br><span class="line">  在  &quot;Assets&#x2F;SceneDependencyCache&quot; 文件夹中序列化存储 SceneWithBuildSettingsGUIDs</span><br><span class="line"></span><br><span class="line">  SceneWithBuildSettingsGUIDs &#x3D; &#123; sceneGUID , buildSettingGUID &#125;</span><br><span class="line"></span><br><span class="line"> &#125; </span><br><span class="line"></span><br><span class="line"> return GetArtifactHash(SceneWithBuildSettingsGUIDs)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 通过 ArtifactHash 来加载子场景</span><br><span class="line"></span><br><span class="line">ResolveScene(artifactHash)&#123;</span><br><span class="line"></span><br><span class="line"> &#x2F;&#x2F; 分解 ArtifactHash</span><br><span class="line"></span><br><span class="line"> GetArtifactPaths(artifactHash, out var paths)</span><br><span class="line"></span><br><span class="line"> sceneHeaderPath &#x3D; GetLoadPathFromArtifactPaths(paths,PathType.EntitiesHeader)</span><br><span class="line"></span><br><span class="line"> scenePath&#x3D; GetLoadPathFromArtifactPaths(paths,PathType.EntitiesBinary)</span><br><span class="line"></span><br><span class="line"> hybridPath&#x3D; GetLoadPathFromArtifactPaths(paths,PathType.EntitiesUnityObjectReferences)</span><br><span class="line"></span><br><span class="line"> &#x2F;&#x2F; 加载场景数据</span><br><span class="line"></span><br><span class="line"> &quot;sceneHeaderPath : VirtualArtifacts&#x2F;Extra&#x2F;69&#x2F;69de41af925e0796303cbad143597411.entityheader&quot;</span><br><span class="line"></span><br><span class="line"> &#x2F;&#x2F; 然而现在有个问题,上面的地址不存在, TryRead 方法应该返回文件不存在才对</span><br><span class="line"></span><br><span class="line"> sceneMetaData &#x3D; BlobAssetReference&lt;SceneMetaData&gt;.TryRead(sceneHeaderPath)</span><br><span class="line"></span><br><span class="line"> &#x2F;&#x2F; 场景数据 : sceneMetaData &#x3D; &#123;SceneName, SceneSectionData[]&#125;</span><br><span class="line"></span><br><span class="line"> &#x2F;&#x2F; 根据 sceneMetaData 实例化并初始化 Sections 实体</span><br><span class="line"></span><br><span class="line"> foreach(sceneMetaData.Sections)&#123;</span><br><span class="line"></span><br><span class="line">  sectionEntity &#x3D; EntityManager.CreateEntity();</span><br><span class="line"></span><br><span class="line">  AddComponentData(RequestSceneLoaded,sectionEntity)</span><br><span class="line"></span><br><span class="line">  AddComponentData(SceneSectionData,sectionEntity)</span><br><span class="line"></span><br><span class="line">  AddComponentData(SceneBoundingVolume,sectionEntity)</span><br><span class="line"></span><br><span class="line">  AddComponentData(ResolvedSectionPath,sectionEntity)</span><br><span class="line"></span><br><span class="line">  AddComponentData(SubScene,sectionEntity)</span><br><span class="line"></span><br><span class="line">  SetBuffer(ResolvedSectionEntity,sectionEntity)</span><br><span class="line"></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>场景文件 Scene</strong></p>
+<p>类 : SceneAsset</p>
+<p>序列化文件 : xxx.unity</p>
+<p>内容 : YAML 格式的场景数据 , </p>
+<p>meta :  sceneGUID</p>
+<p><strong>BuildSettingSceneFile 文件</strong></p>
+<p>类 : SceneWithBuildSettingsGUIDs</p>
+<p>序列化文件 : Asset/SceneDependencyCache/{hash}.sceneWithBuildSettings</p>
+<p>内容 : 二进制信息</p>
+<p>meta : hash</p>
+<p>SceneWithBuildSettingsGUIDs = { sceneGUID , buildSettingGUID }</p>
+<p>hash = math.<strong>hash</strong>(SceneWithBuildSettingsGUIDs)</p>
+<p><strong>对 Unity 新的导入管线的代码猜测</strong> </p>
+<p><strong>命名空间 : UnityEditor.Experimental</strong></p>
+<p><strong>AssetDatabaseExperimental.GetArtifactHash()</strong></p>
+<ol>
+<li>ArtifactHash = math.<strong>hash</strong>(SceneWithBuildSettingsGUIDs+ SubSceneImporterType + syncMode) 并返回</li>
+<li>存储 ArtifactHash 与上面的运算内容成为键值</li>
+</ol>
+<p><strong>AssetDatabaseExperimental.GetArtifactPaths</strong>(artifactHash, out var paths);</p>
+<ol>
+<li>在缓存中寻找 artifactHash 为键</li>
+<li>将相对应的值组成数组, 返回 paths</li>
+</ol>
+<p><strong>加载场景数据时对应的文件不存在,代码却能正常运行的原因,</strong></p>
+<p>估计是 Unity 最新的资源加载管线的操作 Asset pipline</p>
+<p>下图是场景资源加载的打印日志,</p>
+<p>该打印日志在将子场景内容修改后, 需要加载到子场景时出现 </p>
+<p>根据日志内容猜测一个内容修改后的子场景加载步骤如下</p>
+<p>如果内容没有修改过, 那么从 9 开始</p>
+<ol>
+<li>向 Importer 进行加载申请, Import Request, </li>
+<li>向 Importer 提供 sceneWithBuildSettings 路径 path(sceneWithBuildSettings),</li>
+<li>向 Importer 提供 ArtifactHash 来获得加载参数 artifactKey(Guid, Impoter)</li>
+<li>Start importing , 由 UnityEditor.Experimental.AssetImpoters.ScriptedImporter 执行</li>
+<li>Importer 从 sceneWithBuildSettings 得到 SceneGUID</li>
+<li>Importer 从 SceneGUID 得到场景资源文件地址 </li>
+<li>加载场景文件成为二进制资源</li>
+<li>加载后的二进制资源存储位置 VirtualArtifacts/Extra/xx/{ArtifactHash}.entityheader”</li>
+<li>ResolveSceneReferenceSystem 从该二进制资源位置加载 , 这个资源是不可见的 ?</li>
+<li>成功加载出所有子场景对应的 SceneSections</li>
+</ol>
+<p>还没查清是谁向 Importer 进行加载申请的</p>
+<p><strong>SceneSectionStreamingSystem</strong></p>
+<p><strong>OnCreate</strong></p>
+<ol>
+<li>LoadScenesPerFrame = 4</li>
+<li>创建 4个 streamWorld(LoadingWorld) 存于 streams 中 </li>
+<li>创建 1 个 SynchronousSceneLoadWorld (LoadingWorld (synchronous))</li>
+</ol>
+<p><strong>OnUpdate</strong></p>
+<ol>
+<li>为每个场景节点设置优先级,</li>
+</ol>
+<p>foreach(i,sceneSections){</p>
+<p> if(<strong>RequireSyncLoad</strong>(sceneSections[i])) priorities[i] = 0;</p>
+<p> else if(sceneSections[i].SubSectionIndex == 0) priorities[i] = 1;</p>
+<p> else priorities[i] = 2;</p>
+<p>}</p>
+<ol>
+<li>priorityList = 优先级最高的 4 个场景节点</li>
+<li>foreach(priorityList) 针对没有任务的 stream 创建 <strong>AsyncLoadSceneOperation</strong> operation</li>
+<li>operation.<strong>Update</strong>()</li>
+<li>streamingManager.<strong>EndExclusiveEntityTransaction</strong>()</li>
+<li>如果异步加载世界的操作完成了, 将世界中的实体移动到默认世界中</li>
+</ol>
+<p>if(operation.IsComplite) <strong>MoveEntities</strong>(streamingManager, sceneEntity)  </p>
+<p>6.1 获得源世界实体到目标世界实体的映射</p>
+<p>ExtractEntityRemapRefs(srcManager, out entityRemapping)</p>
+<p>6.2 移动实体从流式加载世界到主世界</p>
+<p>EntityManager.MoveEntitiesFrom(srcManager, entityRemapping);</p>
+<p><strong>AsyncLoadSceneOperation</strong></p>
+<p><strong>Update()</strong></p>
+<ol>
+<li><p>创建文件读取任务 _ReadHandle , 读入 _FileContent</p>
+<p>_ReadHandle = AsyncReadManager.Read(_ScenePath, &amp;cmd, 1);</p>
+</li>
+<li><p>如果是编辑器内直接读取文件为 objectReferences, 此时场景内所有用到的资源存在内存中</p>
+</li>
+</ol>
+<p>var resourceRequests = UnityEditorInternal.InternalEditorUtility.LoadSerializedFileAndForget(_ResourcesPathObjRefs);</p>
+<p>_ResourceObjRefs = (ReferencedUnityObjects)resourceRequests[0];</p>
+<ol>
+<li>创建异步加载任务 AsyncLoadSceneJob</li>
+</ol>
+<p>reader = Read(_FileContent)</p>
+<p>SerializeUtility.<strong>DeserializeWorld</strong>(Transaction, reader, objectReferences);</p>
+<ol>
+<li>先执行  _ReadHandle 再执行 AsyncLoadSceneJob</li>
+</ol>
+<p><strong>SerializeUtility.DeserializeWorld</strong></p>
+<p>直接通过内存中的二进制文件在世界中生成实体</p>
+<p><strong>场景序列化</strong></p>
+<p><strong>日志</strong></p>
+<p>执行过程中的日志输出在 Library\ssetImportWorker0.log</p>
+<p><strong>步骤</strong></p>
+<ol>
+<li>当场景编辑完保存成 YAML 格式的文件</li>
+<li>当子场景需要加载时, 某个类发出了 Import Request</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/okzkx/Images/master/s_1715D091BF62C8442D9F5B2E8B3BAF259CD63CD3BE88A4C71861E0CFCBB9F775_1585273525263_image.png" alt="s_1715D091BF62C8442D9F5B2E8B3BAF259CD63CD3BE88A4C71861E0CFCBB9F775_1585273525263_image"></p>
+<p>调用的接口 :</p>
+<p>UnityEditor.Experimental.AssetImporters.ScriptedImporter:GenerateAssetData(AssetImportContext)</p>
+<ol>
+<li>ScriptedImporter 找到了 SubSceneImporter 并调用场景序列化相关 API</li>
+</ol>
+<p>执行过程</p>
+<ul>
+<li><ol>
+<li>OnImportAsset 预处理, 获取场景文件, 依赖关系, 序列化设置等</li>
+<li>打开场景, 加载YAML场景文件到内存中 </li>
+</ol>
+</li>
+</ul>
+<p>Scene scene = EditorSceneManager.OpenScene(scenePath, OpenSceneMode.Additive);</p>
+<ul>
+<li><ol>
+<li>WriteEntityScene 生成 Entity 场景</li>
+</ol>
+</li>
+</ul>
+<p>EditorEntityScenes.WriteEntityScene(scene, settings);</p>
+<ul>
+<li><ul>
+<li><ol>
+<li>创建一个临时的场景转换的世界 “ConversionWorld</li>
+<li>将 scene 在 ConversionWorld 中生成所有实体</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<p>ConvertScene(scene, settings);{</p>
+<p>conversion.MappingSystem.CreatePrimaryEntities()</p>
+<p>Update GameObjectConversionGroup 中的系统</p>
+<p>}</p>
+<ul>
+<li><ul>
+<li><ol>
+<li>所有的实体都具有共享组件 SceneSection, 获取所有的 SceneSection</li>
+<li>对于每种共享组件 SceneSection, 都创建一个部分场景世界  “SectionWorld”</li>
+<li>从 “ConversionWorld” 转移相应实体到 “SectionWorld”</li>
+<li>保存 SectionWorld 成二进制文件</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<p>var fileSize = WriteEntityScene(sectionManager, sceneGUID, subSection.Section.ToString(), settings, out var objectRefCount, entityRemapping);</p>
+<ul>
+<li><ul>
+<li><ul>
+<li><ol>
+<li>序列化 场景物体</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>SerializeUtilityHybrid.Serialize(scene, writer, out objRefs, entityRemapInfos);</p>
+<ul>
+<li><ul>
+<li><ul>
+<li><ol>
+<li>序列化  objRefs</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>UnityEditorInternal.InternalEditorUtility.SaveToSerializedFileAndForget(serializedObjectArray.ToArray(), objRefsPath, false);</p>
+<ul>
+<li><ul>
+<li><ul>
+<li><ol>
+<li>序列化所有 SceneSection 成二进制文件</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>WriteHeader(sceneGUID, sceneSectionsArray, scene.name, settings.AssetImportContext); </p>
+<p><strong>总结</strong></p>
+<p>子场景修改后到子场景序列化和加载的全流程</p>
+<ol>
+<li>场景修改后保存</li>
+</ol>
+<p>.unity 文件以 YAML 格式序列化保存场景设置,</p>
+<p>对应的 .meta 文件保存保存场景的 guid,</p>
+<p>引擎可以通过 meta 的 guid 找到这个 .unity 文件路径</p>
+<p>SubScene</p>
+<ol>
+<li>SubScene 脚本加载子场景</li>
+</ol>
+<ul>
+<li><p>SceneSystem</p>
+</li>
+<li><ol>
+<li>生成 sceneEntity(场景实体) , 与子场景一一对应</li>
+</ol>
+</li>
+</ul>
+<p>ResolveSceneReferenceSystem</p>
+<ol>
+<li>序列化存储 SceneWithBuildSettingsGUIDs{sceneGUID, buildSettingGUID}</li>
+</ol>
+<p>“Assets/SceneDependencyCache”</p>
+<p>ResolveSceneReferenceSystem</p>
+<ol>
+<li>场景序列化操作, 并返回 <strong>ArtifactHash</strong> </li>
+</ol>
+<p><strong>AssetDatabase.Experimental.GetArtifactHash(</strong>SceneWithBuildSettingsGUIDs<strong>)</strong></p>
+<p><strong>猜测</strong> 引擎调用了 ScriptedImporter:GenerateAssetData</p>
+<p>UnityEditor.Experimental.AssetImporters.ScriptedImporter:GenerateAssetData(AssetImportContext)</p>
+<p>ScriptedImporter 找到了 SubSceneImporter 并调用场景序列化相关 API</p>
+<ul>
+<li><p>EditorEntityScenes</p>
+</li>
+<li><ol>
+<li>创建临时的世界 ConvertionWorld</li>
+</ol>
+</li>
+<li><p>GameObjectConversionMappingSystem</p>
+</li>
+<li><ol>
+<li>将场景中的所有物体在 ConvertionWorld 中生成所有实体,</li>
+<li>将物体中的相应脚本转换成为实体的组件</li>
+</ol>
+</li>
+<li><p>EditorEntityScenes</p>
+</li>
+<li><p>d. 如果实体的 SceneSection 只不同,</p>
+</li>
+<li><p>从 ConversionWorld 转移相应实体到多个 SectionWorld</p>
+</li>
+<li><ol>
+<li>所有 SectionWorld 中的实体保存成为二进制文件 .0.entities</li>
+</ol>
+</li>
+</ul>
+<p>“sceneHeaderPath : VirtualArtifacts/Extra/69/69de41af925e0796303cbad143597411.entityheader”</p>
+<p>ResolveSceneReferenceSystem</p>
+<ol>
+<li>通过 <strong>ArtifactHash</strong> 获得 entityHeader 文件来加载场景</li>
+</ol>
+<ul>
+<li><p>ResolveSceneReferenceSystem</p>
+</li>
+<li><ol>
+<li>加载出所有 SceneSection 实体, 添加相应组件</li>
+</ol>
+</li>
+<li><p>SceneSectionStreamingSystem </p>
+</li>
+<li><ol>
+<li>创建 4 个异步加载世界(LoadingWorld), 1 个同步加载世界</li>
+</ol>
+</li>
+<li><p>AsyncLoadSceneOperation </p>
+</li>
+<li><ol>
+<li>按照优先级,依次加载每个 SceneSection 关联的实体到 LoadingWorld</li>
+</ol>
+</li>
+<li><p>SceneSectionStreamingSystem</p>
+</li>
+<li><ol>
+<li>异步加载结束后, 移动所有实体到主世界 DefaultWorld</li>
+</ol>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/06/19/Unity/NewTec/SRP/" rel="next" title="SRP">
+                <i class="fa fa-chevron-left"></i> SRP
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/06/19/Unity/Editor/" rel="prev" title="Editor">
+                Editor <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="https://thirdqq.qlogo.cn/g?b=oidb&k=UblQCjyCbtfo4c3aTko4IQ&s=100&t=1582812597"
+                alt="MEZKX" />
+            
+              <p class="site-author-name" itemprop="name">MEZKX</p>
+              <p class="site-description motion-element" itemprop="description">以最纯粹的热爱，走最漫长的路</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/index.html%7C%7Carchive">
+              
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SubScene"><span class="nav-number">1.</span> <span class="nav-text">SubScene</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-资料"><span class="nav-number">1.1.</span> <span class="nav-text">1. 资料</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Paper"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">Paper</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Projects"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">Projects</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Videos"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">Videos</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Archive"><span class="nav-number">1.1.0.4.</span> <span class="nav-text">Archive</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-SubScene-源码分析"><span class="nav-number">1.2.</span> <span class="nav-text">2. SubScene 源码分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SceneSystem"><span class="nav-number">1.2.1.</span> <span class="nav-text">SceneSystem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SubScene-cs"><span class="nav-number">1.2.2.</span> <span class="nav-text">SubScene.cs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ResolveSceneReferenceSystem"><span class="nav-number">1.2.3.</span> <span class="nav-text">ResolveSceneReferenceSystem</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MEZKX</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
