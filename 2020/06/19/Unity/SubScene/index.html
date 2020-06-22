@@ -81,14 +81,14 @@
 
 <meta name="description" content="SubScene1. 资料PaperStreaming Open World In ECS Framework - Unity Mega City - 叶磊 Projectsunite2019-scenedatatodots VideosConverting scene data to DOTS - Unite Copenhagen ArchiveGame Object Conversion an">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SubScene">
-<meta property="og:url" content="http://yoursite.com/2020/06/19/Unity/NewTec/SubScene/index.html">
+<meta property="og:title" content="Unity&#x2F;SubScene">
+<meta property="og:url" content="http://yoursite.com/2020/06/19/Unity/SubScene/index.html">
 <meta property="og:site_name" content="OKZKX">
 <meta property="og:description" content="SubScene1. 资料PaperStreaming Open World In ECS Framework - Unity Mega City - 叶磊 Projectsunite2019-scenedatatodots VideosConverting scene data to DOTS - Unite Copenhagen ArchiveGame Object Conversion an">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/okzkx/Images/master/s_1715D091BF62C8442D9F5B2E8B3BAF259CD63CD3BE88A4C71861E0CFCBB9F775_1585273525263_image.png">
 <meta property="article:published_time" content="2020-06-19T02:00:05.000Z">
-<meta property="article:modified_time" content="2020-06-19T10:29:55.021Z">
+<meta property="article:modified_time" content="2020-06-22T05:40:10.265Z">
 <meta property="article:author" content="MEZKX">
 <meta property="article:tag" content="Unity">
 <meta property="article:tag" content="Graphic">
@@ -123,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/06/19/Unity/NewTec/SubScene/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/06/19/Unity/SubScene/"/>
 
 
 
 
 
-  <title>SubScene | OKZKX</title>
+  <title>Unity/SubScene | OKZKX</title>
   
 
 
@@ -266,7 +266,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/19/Unity/NewTec/SubScene/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/19/Unity/SubScene/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="MEZKX">
@@ -283,7 +283,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">SubScene</h1>
+          <h1 class="post-title" itemprop="name headline">Unity/SubScene</h1>
         
 
         <div class="post-meta">
@@ -487,86 +487,35 @@
 <li>ScriptedImporter 找到了 SubSceneImporter 并调用场景序列化相关 API</li>
 </ol>
 <p>执行过程</p>
-<ul>
-<li><ol>
+<ol>
 <li>OnImportAsset 预处理, 获取场景文件, 依赖关系, 序列化设置等</li>
 <li>打开场景, 加载YAML场景文件到内存中 </li>
 </ol>
-</li>
-</ul>
 <p>Scene scene = EditorSceneManager.OpenScene(scenePath, OpenSceneMode.Additive);</p>
-<ul>
-<li><ol>
+<ol>
 <li>WriteEntityScene 生成 Entity 场景</li>
 </ol>
-</li>
-</ul>
 <p>EditorEntityScenes.WriteEntityScene(scene, settings);</p>
-<ul>
-<li><ul>
-<li><ol>
+<ol>
 <li>创建一个临时的场景转换的世界 “ConversionWorld</li>
 <li>将 scene 在 ConversionWorld 中生成所有实体</li>
 </ol>
-</li>
-</ul>
-</li>
-</ul>
 <p>ConvertScene(scene, settings);{</p>
 <p>conversion.MappingSystem.CreatePrimaryEntities()</p>
 <p>Update GameObjectConversionGroup 中的系统</p>
 <p>}</p>
-<ul>
-<li><ul>
-<li><ol>
+<ol>
 <li>所有的实体都具有共享组件 SceneSection, 获取所有的 SceneSection</li>
 <li>对于每种共享组件 SceneSection, 都创建一个部分场景世界  “SectionWorld”</li>
 <li>从 “ConversionWorld” 转移相应实体到 “SectionWorld”</li>
 <li>保存 SectionWorld 成二进制文件</li>
 </ol>
-</li>
-</ul>
-</li>
-</ul>
 <p>var fileSize = WriteEntityScene(sectionManager, sceneGUID, subSection.Section.ToString(), settings, out var objectRefCount, entityRemapping);</p>
-<ul>
-<li><ul>
-<li><ul>
-<li><ol>
-<li>序列化 场景物体</li>
-</ol>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<p>序列化 场景物体</p>
 <p>SerializeUtilityHybrid.Serialize(scene, writer, out objRefs, entityRemapInfos);</p>
-<ul>
-<li><ul>
-<li><ul>
-<li><ol>
-<li>序列化  objRefs</li>
-</ol>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<p>序列化  objRefs</p>
 <p>UnityEditorInternal.InternalEditorUtility.SaveToSerializedFileAndForget(serializedObjectArray.ToArray(), objRefsPath, false);</p>
-<ul>
-<li><ul>
-<li><ul>
-<li><ol>
-<li>序列化所有 SceneSection 成二进制文件</li>
-</ol>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<p>序列化所有 SceneSection 成二进制文件</p>
 <p>WriteHeader(sceneGUID, sceneSectionsArray, scene.name, settings.AssetImportContext); </p>
 <p><strong>总结</strong></p>
 <p>子场景修改后到子场景序列化和加载的全流程</p>
@@ -589,12 +538,12 @@
 </li>
 </ul>
 <p>ResolveSceneReferenceSystem</p>
-<ol>
+<ol start="2">
 <li>序列化存储 SceneWithBuildSettingsGUIDs{sceneGUID, buildSettingGUID}</li>
 </ol>
 <p>“Assets/SceneDependencyCache”</p>
 <p>ResolveSceneReferenceSystem</p>
-<ol>
+<ol start="3">
 <li>场景序列化操作, 并返回 <strong>ArtifactHash</strong> </li>
 </ol>
 <p><strong>AssetDatabase.Experimental.GetArtifactHash(</strong>SceneWithBuildSettingsGUIDs<strong>)</strong></p>
@@ -631,32 +580,14 @@
 <ol>
 <li>通过 <strong>ArtifactHash</strong> 获得 entityHeader 文件来加载场景</li>
 </ol>
-<ul>
-<li><p>ResolveSceneReferenceSystem</p>
-</li>
-<li><ol>
-<li>加载出所有 SceneSection 实体, 添加相应组件</li>
-</ol>
-</li>
-<li><p>SceneSectionStreamingSystem </p>
-</li>
-<li><ol>
-<li>创建 4 个异步加载世界(LoadingWorld), 1 个同步加载世界</li>
-</ol>
-</li>
-<li><p>AsyncLoadSceneOperation </p>
-</li>
-<li><ol>
-<li>按照优先级,依次加载每个 SceneSection 关联的实体到 LoadingWorld</li>
-</ol>
-</li>
-<li><p>SceneSectionStreamingSystem</p>
-</li>
-<li><ol>
-<li>异步加载结束后, 移动所有实体到主世界 DefaultWorld</li>
-</ol>
-</li>
-</ul>
+<p>ResolveSceneReferenceSystem</p>
+<p>加载出所有 SceneSection 实体, 添加相应组件</p>
+<p>SceneSectionStreamingSystem </p>
+<p>创建 4 个异步加载世界(LoadingWorld), 1 个同步加载世界</p>
+<p>AsyncLoadSceneOperation </p>
+<p>按照优先级,依次加载每个 SceneSection 关联的实体到 LoadingWorld</p>
+<p>SceneSectionStreamingSystem</p>
+<p>异步加载结束后, 移动所有实体到主世界 DefaultWorld</p>
 
       
     </div>
@@ -681,8 +612,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/06/19/Unity/NewTec/SRP/" rel="next" title="SRP">
-                <i class="fa fa-chevron-left"></i> SRP
+              <a href="/2020/06/19/Unity/SRP/" rel="next" title="Unity/SRP">
+                <i class="fa fa-chevron-left"></i> Unity/SRP
               </a>
             
           </div>
@@ -691,8 +622,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/06/19/Unity/Editor/" rel="prev" title="Editor">
-                Editor <i class="fa fa-chevron-right"></i>
+              <a href="/2020/06/19/Unity/Editor/" rel="prev" title="Unity/Editor">
+                Unity/Editor <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -796,7 +727,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

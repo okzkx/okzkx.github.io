@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="addressabledocumenthttps:&#x2F;&#x2F;docs.unity3d.com&#x2F;Packages&#x2F;com.unity.addressables@1.7&#x2F;manual&#x2F;index.html Unity Bloghttps:&#x2F;&#x2F;blogs.unity3d.com&#x2F; Input SystemAsset Import PipelineBlog https:&#x2F;&#x2F;blogs.unity3d.com&#x2F;2">
+<meta name="description" content="OnGUI纯使用代码绘制 GUI，相比 UGUI 好处是 工作量少，移植方便，兼容性好。 缺点是 没法所见即所得，不美观，没法实现复杂的功能。 四个绘制控件工具类这四个类都能绘制控件，绘制的控件类型，环境有所区别。 GUI GUILayout EditorGUI EditorGUILayout 名词解释Editor 只能运行在编辑器中，不加可运行于任何时 Layout 自定义布局，可以省去参数定位">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Unity 技术总览">
-<meta property="og:url" content="http://yoursite.com/2020/06/19/Unity/%E6%8A%80%E6%9C%AF%E6%80%BB%E8%A7%88/index.html">
+<meta property="og:title" content="Unity&#x2F;OnGUI">
+<meta property="og:url" content="http://yoursite.com/2020/06/17/Unity/OnGUI/index.html">
 <meta property="og:site_name" content="OKZKX">
-<meta property="og:description" content="addressabledocumenthttps:&#x2F;&#x2F;docs.unity3d.com&#x2F;Packages&#x2F;com.unity.addressables@1.7&#x2F;manual&#x2F;index.html Unity Bloghttps:&#x2F;&#x2F;blogs.unity3d.com&#x2F; Input SystemAsset Import PipelineBlog https:&#x2F;&#x2F;blogs.unity3d.com&#x2F;2">
+<meta property="og:description" content="OnGUI纯使用代码绘制 GUI，相比 UGUI 好处是 工作量少，移植方便，兼容性好。 缺点是 没法所见即所得，不美观，没法实现复杂的功能。 四个绘制控件工具类这四个类都能绘制控件，绘制的控件类型，环境有所区别。 GUI GUILayout EditorGUI EditorGUILayout 名词解释Editor 只能运行在编辑器中，不加可运行于任何时 Layout 自定义布局，可以省去参数定位">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-06-19T02:00:01.000Z">
-<meta property="article:modified_time" content="2020-06-19T10:29:35.898Z">
+<meta property="article:published_time" content="2020-06-17T03:27:55.000Z">
+<meta property="article:modified_time" content="2020-06-22T03:51:14.368Z">
 <meta property="article:author" content="MEZKX">
 <meta property="article:tag" content="Unity">
 <meta property="article:tag" content="Graphic">
@@ -121,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/06/19/Unity/技术总览/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/06/17/Unity/OnGUI/"/>
 
 
 
 
 
-  <title>Unity 技术总览 | OKZKX</title>
+  <title>Unity/OnGUI | OKZKX</title>
   
 
 
@@ -264,7 +264,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/19/Unity/%E6%8A%80%E6%9C%AF%E6%80%BB%E8%A7%88/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/17/Unity/OnGUI/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="MEZKX">
@@ -281,7 +281,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Unity 技术总览</h1>
+          <h1 class="post-title" itemprop="name headline">Unity/OnGUI</h1>
         
 
         <div class="post-meta">
@@ -293,8 +293,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-19T10:00:01+08:00">
-                2020-06-19
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-17T11:27:55+08:00">
+                2020-06-17
               </time>
             
 
@@ -353,28 +353,45 @@
       
 
       
-        <h3 id="addressable"><a href="#addressable" class="headerlink" title="addressable"></a>addressable</h3><h3 id="document"><a href="#document" class="headerlink" title="document"></a>document</h3><p><a href="https://docs.unity3d.com/Packages/com.unity.addressables@1.7/manual/index.html" target="_blank" rel="noopener">https://docs.unity3d.com/Packages/com.unity.addressables@1.7/manual/index.html</a></p>
-<h3 id="Unity-Blog"><a href="#Unity-Blog" class="headerlink" title="Unity Blog"></a>Unity Blog</h3><p><a href="https://blogs.unity3d.com/" target="_blank" rel="noopener">https://blogs.unity3d.com/</a></p>
-<h3 id="Input-System"><a href="#Input-System" class="headerlink" title="Input System"></a>Input System</h3><h3 id="Asset-Import-Pipeline"><a href="#Asset-Import-Pipeline" class="headerlink" title="Asset Import Pipeline"></a>Asset Import Pipeline</h3><p>Blog</p>
-<p><a href="https://blogs.unity3d.com/2019/10/31/the-new-asset-import-pipeline-solid-foundation-for-speeding-up-asset-imports/" target="_blank" rel="noopener">https://blogs.unity3d.com/2019/10/31/the-new-asset-import-pipeline-solid-foundation-for-speeding-up-asset-imports/</a></p>
-<h3 id="Render-Pipline"><a href="#Render-Pipline" class="headerlink" title="Render Pipline"></a>Render Pipline</h3><h4 id="SRP"><a href="#SRP" class="headerlink" title="SRP"></a>SRP</h4><p>官网</p>
-<p><a href="https://unity.com/cn/srp" target="_blank" rel="noopener">https://unity.com/cn/srp</a></p>
-<h4 id="URP"><a href="#URP" class="headerlink" title="URP"></a>URP</h4><p>官网</p>
-<p><a href="https://unity.com/cn/srp/universal-render-pipeline" target="_blank" rel="noopener">https://unity.com/cn/srp/universal-render-pipeline</a></p>
-<p>文档</p>
-<p><a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@9.0/manual/InstallingAndConfiguringURP.html" target="_blank" rel="noopener">https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@9.0/manual/InstallingAndConfiguringURP.html</a></p>
-<p>博客</p>
-<p><a href="https://blogs.unity3d.com/cn/2018/02/21/the-lightweight-render-pipeline-optimizing-real-time-performance/?_ga=2.2343157.45218148.1586951626-426189473.1585532237" target="_blank" rel="noopener">https://blogs.unity3d.com/cn/2018/02/21/the-lightweight-render-pipeline-optimizing-real-time-performance/?_ga=2.2343157.45218148.1586951626-426189473.1585532237</a></p>
-<h4 id="HDRP"><a href="#HDRP" class="headerlink" title="HDRP"></a>HDRP</h4><p>官网</p>
-<p><a href="https://unity.com/srp/High-Definition-Render-Pipeline" target="_blank" rel="noopener">https://unity.com/srp/High-Definition-Render-Pipeline</a></p>
-<p>文档</p>
-<p><a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@6.5/manual/index.html" target="_blank" rel="noopener">https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@6.5/manual/index.html</a></p>
-<h3 id="ECS"><a href="#ECS" class="headerlink" title="ECS"></a>ECS</h3><p><a href="https://docs.unity3d.com/Packages/com.unity.entities@0.7/manual/ecs_entity_query.html" target="_blank" rel="noopener">https://docs.unity3d.com/Packages/com.unity.entities@0.7/manual/ecs_entity_query.html</a></p>
-<h3 id="Hybird-render"><a href="#Hybird-render" class="headerlink" title="Hybird render"></a>Hybird render</h3><p><a href="https://docs.unity3d.com/Packages/com.unity.rendering.hybrid@0.3/api/Unity.Rendering.html" target="_blank" rel="noopener">https://docs.unity3d.com/Packages/com.unity.rendering.hybrid@0.3/api/Unity.Rendering.html</a></p>
-<h3 id="HLOD"><a href="#HLOD" class="headerlink" title="HLOD"></a>HLOD</h3><p><a href="https://forum.unity.com/threads/hlod-streaming-octahedral-impostors-using-megacity-subscenes.673390/" target="_blank" rel="noopener">https://forum.unity.com/threads/hlod-streaming-octahedral-impostors-using-megacity-subscenes.673390/</a></p>
-<h3 id="Blob-assets"><a href="#Blob-assets" class="headerlink" title="Blob assets"></a>Blob assets</h3><p><a href="https://github.com/Unity-Technologies/EntityComponentSystemSamples/tree/master/ECSSamples/Assets/Advanced/BlobAsset" target="_blank" rel="noopener">https://github.com/Unity-Technologies/EntityComponentSystemSamples/tree/master/ECSSamples/Assets/Advanced/BlobAsset</a></p>
-<h3 id="Burst"><a href="#Burst" class="headerlink" title="Burst"></a>Burst</h3><p><a href="https://docs.unity3d.com/Packages/com.unity.burst@1.2/manual/index.html#burst-user-guide" target="_blank" rel="noopener">https://docs.unity3d.com/Packages/com.unity.burst@1.2/manual/index.html#burst-user-guide</a></p>
-<h3 id="Odin-Inspector"><a href="#Odin-Inspector" class="headerlink" title="Odin Inspector"></a>Odin Inspector</h3><p><a href="https://www.jianshu.com/p/f1b27e85bc35" target="_blank" rel="noopener">https://www.jianshu.com/p/f1b27e85bc35</a></p>
+        <h1 id="OnGUI"><a href="#OnGUI" class="headerlink" title="OnGUI"></a>OnGUI</h1><p>纯使用代码绘制 GUI，相比 UGUI</p>
+<p>好处是 工作量少，移植方便，兼容性好。</p>
+<p>缺点是 没法所见即所得，不美观，没法实现复杂的功能。</p>
+<h2 id="四个绘制控件工具类"><a href="#四个绘制控件工具类" class="headerlink" title="四个绘制控件工具类"></a>四个绘制控件工具类</h2><p>这四个类都能绘制控件，绘制的控件类型，环境有所区别。</p>
+<p>GUI</p>
+<p>GUILayout</p>
+<p>EditorGUI</p>
+<p>EditorGUILayout</p>
+<h4 id="名词解释"><a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h4><p>Editor</p>
+<p>只能运行在编辑器中，不加可运行于任何时</p>
+<p>Layout</p>
+<p>自定义布局，可以省去参数定位布局位置</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>从上到下限定越来越严格</p>
+<p>下部分依赖于上部分实现</p>
+<p>所以一般来说 EditorGUILayout 是最好用的，可用区域最小的。</p>
+<p>所以绘制工具类选择的优先级为从下到上</p>
+<h2 id="所有控件"><a href="#所有控件" class="headerlink" title="所有控件"></a>所有控件</h2><p>所有控件包括</p>
+<p>scrollView</p>
+<p>Scrollbar</p>
+<p>Slider</p>
+<p>window</p>
+<p>toggle</p>
+<p>button</p>
+<p>textArea </p>
+<p>textField</p>
+<p>label</p>
+<p>box</p>
+<h2 id="绘制样式"><a href="#绘制样式" class="headerlink" title="绘制样式"></a>绘制样式</h2><p>获取当前的 GUI 所有控件样式</p>
+<p><code>GUI.Skin</code></p>
+<p>也可以获取 Unity 内置的 OnGUI 样式</p>
+<p><code>EditorStyles</code></p>
+<p>样式表 <code>GUIStyle</code></p>
+<p>每种控件的样式表设置都不一样</p>
+<p>可以在绘制控件时单独指定样式表，</p>
+<p>也可以统一设置某种控件的样式表。</p>
+<h2 id="控件内容"><a href="#控件内容" class="headerlink" title="控件内容"></a>控件内容</h2><h4 id="GUIContent"><a href="#GUIContent" class="headerlink" title="GUIContent"></a>GUIContent</h4><p>一个控件内可以有一个控件内容 GUIContent，控件会自动布局 GUIConetent ，可以由三部分组成 text,image,tooltip。</p>
+<p>一般在绘制控件的 API 中，可以简化 CUIContent 的实例化，直接传入 text，内部自动将其实例化为 GUIContent</p>
+<h2 id="布局辅助类"><a href="#布局辅助类" class="headerlink" title="布局辅助类"></a>布局辅助类</h2><h4 id="GUILayoutOption"><a href="#GUILayoutOption" class="headerlink" title="GUILayoutOption"></a>GUILayoutOption</h4><p>让 GUILayout 可以进行一些自定义的布局。</p>
+<p>从 GUILayout 设置一些当前控件对布局的影响即可， 获取  GUILayoutOption 即可</p>
 
       
     </div>
@@ -399,8 +416,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/06/18/Git/Git-%E5%90%8C%E6%AD%A5%E7%AF%87/" rel="next" title="Git-同步篇">
-                <i class="fa fa-chevron-left"></i> Git-同步篇
+              <a href="/2020/06/16/Blog/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-%E5%9F%BA%E7%A1%80%E7%AF%87/" rel="next" title="搭建个人博客-基础篇">
+                <i class="fa fa-chevron-left"></i> 搭建个人博客-基础篇
               </a>
             
           </div>
@@ -409,8 +426,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/06/19/Unity/NewTec/Jobsystem/" rel="prev" title="JobSystem">
-                JobSystem <i class="fa fa-chevron-right"></i>
+              <a href="/2020/06/17/Unity/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9D%97/" rel="prev" title="Unity/自定义模块">
+                Unity/自定义模块 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -514,7 +531,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -547,7 +564,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#addressable"><span class="nav-number">1.</span> <span class="nav-text">addressable</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#document"><span class="nav-number">2.</span> <span class="nav-text">document</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Unity-Blog"><span class="nav-number">3.</span> <span class="nav-text">Unity Blog</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Input-System"><span class="nav-number">4.</span> <span class="nav-text">Input System</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Asset-Import-Pipeline"><span class="nav-number">5.</span> <span class="nav-text">Asset Import Pipeline</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Render-Pipline"><span class="nav-number">6.</span> <span class="nav-text">Render Pipline</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#SRP"><span class="nav-number">6.1.</span> <span class="nav-text">SRP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#URP"><span class="nav-number">6.2.</span> <span class="nav-text">URP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HDRP"><span class="nav-number">6.3.</span> <span class="nav-text">HDRP</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ECS"><span class="nav-number">7.</span> <span class="nav-text">ECS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hybird-render"><span class="nav-number">8.</span> <span class="nav-text">Hybird render</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HLOD"><span class="nav-number">9.</span> <span class="nav-text">HLOD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Blob-assets"><span class="nav-number">10.</span> <span class="nav-text">Blob assets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Burst"><span class="nav-number">11.</span> <span class="nav-text">Burst</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Odin-Inspector"><span class="nav-number">12.</span> <span class="nav-text">Odin Inspector</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OnGUI"><span class="nav-number">1.</span> <span class="nav-text">OnGUI</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#四个绘制控件工具类"><span class="nav-number">1.1.</span> <span class="nav-text">四个绘制控件工具类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#名词解释"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">名词解释</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">1.1.1.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#所有控件"><span class="nav-number">1.2.</span> <span class="nav-text">所有控件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绘制样式"><span class="nav-number">1.3.</span> <span class="nav-text">绘制样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#控件内容"><span class="nav-number">1.4.</span> <span class="nav-text">控件内容</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GUIContent"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">GUIContent</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布局辅助类"><span class="nav-number">1.5.</span> <span class="nav-text">布局辅助类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GUILayoutOption"><span class="nav-number">1.5.0.1.</span> <span class="nav-text">GUILayoutOption</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>

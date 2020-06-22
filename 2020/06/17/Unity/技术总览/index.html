@@ -79,21 +79,19 @@
 
 
 
-<meta name="description" content="Jobsystem文档 JobSystem https:&#x2F;&#x2F;docs.unity3d.com&#x2F;Manual&#x2F;JobSystem.html JobSystem in ECS https:&#x2F;&#x2F;docs.unity3d.com&#x2F;Packages&#x2F;com.unity.entities@0.1&#x2F;manual&#x2F;entity_iteration_job.html 3 种多线程执行方式  立即执行  .Run()">
+<meta name="description" content="addressabledocumenthttps:&#x2F;&#x2F;docs.unity3d.com&#x2F;Packages&#x2F;com.unity.addressables@1.7&#x2F;manual&#x2F;index.html Unity Bloghttps:&#x2F;&#x2F;blogs.unity3d.com&#x2F; Input SystemAsset Import PipelineBlog https:&#x2F;&#x2F;blogs.unity3d.com&#x2F;2">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JobSystem">
-<meta property="og:url" content="http://yoursite.com/2020/06/19/Unity/NewTec/Jobsystem/index.html">
+<meta property="og:title" content="Unity&#x2F;技术总览">
+<meta property="og:url" content="http://yoursite.com/2020/06/17/Unity/%E6%8A%80%E6%9C%AF%E6%80%BB%E8%A7%88/index.html">
 <meta property="og:site_name" content="OKZKX">
-<meta property="og:description" content="Jobsystem文档 JobSystem https:&#x2F;&#x2F;docs.unity3d.com&#x2F;Manual&#x2F;JobSystem.html JobSystem in ECS https:&#x2F;&#x2F;docs.unity3d.com&#x2F;Packages&#x2F;com.unity.entities@0.1&#x2F;manual&#x2F;entity_iteration_job.html 3 种多线程执行方式  立即执行  .Run()">
+<meta property="og:description" content="addressabledocumenthttps:&#x2F;&#x2F;docs.unity3d.com&#x2F;Packages&#x2F;com.unity.addressables@1.7&#x2F;manual&#x2F;index.html Unity Bloghttps:&#x2F;&#x2F;blogs.unity3d.com&#x2F; Input SystemAsset Import PipelineBlog https:&#x2F;&#x2F;blogs.unity3d.com&#x2F;2">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://docs.unity3d.com/uploads/Main/jobsystem_parallelfor_job_batches.svg">
-<meta property="article:published_time" content="2020-06-19T02:00:02.000Z">
-<meta property="article:modified_time" content="2020-06-19T10:29:42.042Z">
+<meta property="article:published_time" content="2020-06-17T03:27:55.000Z">
+<meta property="article:modified_time" content="2020-06-22T03:51:04.929Z">
 <meta property="article:author" content="MEZKX">
 <meta property="article:tag" content="Unity">
 <meta property="article:tag" content="Graphic">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://docs.unity3d.com/uploads/Main/jobsystem_parallelfor_job_batches.svg">
 
 
 
@@ -123,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/06/19/Unity/NewTec/Jobsystem/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/06/17/Unity/技术总览/"/>
 
 
 
 
 
-  <title>JobSystem | OKZKX</title>
+  <title>Unity/技术总览 | OKZKX</title>
   
 
 
@@ -266,7 +264,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/19/Unity/NewTec/Jobsystem/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/17/Unity/%E6%8A%80%E6%9C%AF%E6%80%BB%E8%A7%88/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="MEZKX">
@@ -283,7 +281,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JobSystem</h1>
+          <h1 class="post-title" itemprop="name headline">Unity/技术总览</h1>
         
 
         <div class="post-meta">
@@ -295,8 +293,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-19T10:00:02+08:00">
-                2020-06-19
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-17T11:27:55+08:00">
+                2020-06-17
               </time>
             
 
@@ -355,77 +353,28 @@
       
 
       
-        <h1 id="Jobsystem"><a href="#Jobsystem" class="headerlink" title="Jobsystem"></a>Jobsystem</h1><p><strong>文档</strong></p>
-<p>JobSystem</p>
-<p><a href="https://docs.unity3d.com/Manual/JobSystem.html" target="_blank" rel="noopener">https://docs.unity3d.com/Manual/JobSystem.html</a></p>
-<p>JobSystem in ECS</p>
-<p><a href="https://docs.unity3d.com/Packages/com.unity.entities@0.1/manual/entity_iteration_job.html" target="_blank" rel="noopener">https://docs.unity3d.com/Packages/com.unity.entities@0.1/manual/entity_iteration_job.html</a></p>
-<p><strong>3 种多线程执行方式</strong></p>
-<ol>
-<li>立即执行</li>
-</ol>
-<p>.Run()</p>
-<p>基本不使用，只在 Debug 时使用，因为如果使用这个，</p>
-<p>直接在主线程里编写代码就行了</p>
-<ol start="2">
-<li>托管单线程</li>
-</ol>
-<p>IJobExtensions ::</p>
-<p>IJob.Schdule()</p>
-<p>JobForEachExtensions::</p>
-<p>IBaseJobForEach.ScheduleSingle()</p>
-<ol start="3">
-<li>托管多线程</li>
-</ol>
-<p>IJobParallelForExtensions ::</p>
-<p>IJobParallelFor.Schdule()</p>
-<p>JobForEachExtensions::</p>
-<p>IBaseJobForEach.Schedule()</p>
-<p><strong>托管线程调度模式</strong></p>
-<p>托管单线程一次性调度一个作业，</p>
-<p>托管多线程一次性调度多个作业。</p>
-<p><img src="https://docs.unity3d.com/uploads/Main/jobsystem_parallelfor_job_batches.svg" alt="A ParallelFor job dividing batches across cores"></p>
-<p>4 个泳道，MainThread , C# JobSystem, Job Queue, Native Job System</p>
-<p>MainThread 创建作业，安排作业依赖</p>
-<p>C# JobSystem 将所有将调度的作业分成 Batch</p>
-<p>Job Queue 将所有将调度的 Batch 分为 Native job， Native job 为cup 核心的作业执行单元</p>
-<p> Native Job System 将所有 Native job 按照顺序和依赖调度给空闲的线程执行</p>
-<p><strong>Native Memory</strong></p>
-<p>作业作为方法执行，其指令不在栈上，没有返回值。</p>
-<p>用 Burst 编译器的作业无法使用堆中的数据。</p>
-<p>线程之间各自拥有自己的栈，共享拥有一个属于进程的堆。</p>
-<p>通过主线程共享自己栈方式实现主线程和作业的数据同步。</p>
-<p>Native Container 是一种数据结构，用来将主线程的栈的数据共享出去。</p>
-<p>其数据存放在栈上，指向这些数据的指针在堆中。</p>
-<p>主线程在创建作业时，交给其 Native Container 堆中的指针，</p>
-<p>作业可以用其来操作主线程中的栈实现通过共享内存的数据互通。</p>
-<p><strong>作业限制</strong></p>
-<p>有些主线程可以做的操作，在 Burst 的条件下，在作业，或者多线程作业中不可做。</p>
-<ol>
-<li><p>作业不可操作堆内存</p>
-</li>
-<li><p>作业不可使用 EntityManager</p>
-</li>
-<li><p>多线程作业不可同时写同一个共享内存</p>
-</li>
-</ol>
-<p><strong>作业限制的迂回方式</strong></p>
-<ol>
-<li><p>使用 NativeContainer 操作共享栈代替操作共享堆</p>
-</li>
-<li><p>使用 EntityCommandBuffer 代替 EntityManager，</p>
-</li>
-<li><p>使用栈上的数据代替堆上的数据，</p>
-</li>
-<li><p>将场景数据的操作推迟到<strong>同步点</strong>交给主线程操作</p>
-</li>
-</ol>
-<p><strong>作业调度</strong></p>
-<p>主线程中完成作业调度，禁止在作业中生成作业或进行作业调度。</p>
-<p>JobHandle 可以决定依赖关系</p>
-<p>主线程对作业 Schedule 完后，任何时候该作业都可能开始或完成。</p>
-<p>JobHandle.Comple, 主线程等待某一作业完成。</p>
-<p>这种情况一般是作业对共享栈进行操作，主线程需要使用到这共享栈的值。</p>
+        <h3 id="addressable"><a href="#addressable" class="headerlink" title="addressable"></a>addressable</h3><h3 id="document"><a href="#document" class="headerlink" title="document"></a>document</h3><p><a href="https://docs.unity3d.com/Packages/com.unity.addressables@1.7/manual/index.html" target="_blank" rel="noopener">https://docs.unity3d.com/Packages/com.unity.addressables@1.7/manual/index.html</a></p>
+<h3 id="Unity-Blog"><a href="#Unity-Blog" class="headerlink" title="Unity Blog"></a>Unity Blog</h3><p><a href="https://blogs.unity3d.com/" target="_blank" rel="noopener">https://blogs.unity3d.com/</a></p>
+<h3 id="Input-System"><a href="#Input-System" class="headerlink" title="Input System"></a>Input System</h3><h3 id="Asset-Import-Pipeline"><a href="#Asset-Import-Pipeline" class="headerlink" title="Asset Import Pipeline"></a>Asset Import Pipeline</h3><p>Blog</p>
+<p><a href="https://blogs.unity3d.com/2019/10/31/the-new-asset-import-pipeline-solid-foundation-for-speeding-up-asset-imports/" target="_blank" rel="noopener">https://blogs.unity3d.com/2019/10/31/the-new-asset-import-pipeline-solid-foundation-for-speeding-up-asset-imports/</a></p>
+<h3 id="Render-Pipline"><a href="#Render-Pipline" class="headerlink" title="Render Pipline"></a>Render Pipline</h3><h4 id="SRP"><a href="#SRP" class="headerlink" title="SRP"></a>SRP</h4><p>官网</p>
+<p><a href="https://unity.com/cn/srp" target="_blank" rel="noopener">https://unity.com/cn/srp</a></p>
+<h4 id="URP"><a href="#URP" class="headerlink" title="URP"></a>URP</h4><p>官网</p>
+<p><a href="https://unity.com/cn/srp/universal-render-pipeline" target="_blank" rel="noopener">https://unity.com/cn/srp/universal-render-pipeline</a></p>
+<p>文档</p>
+<p><a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@9.0/manual/InstallingAndConfiguringURP.html" target="_blank" rel="noopener">https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@9.0/manual/InstallingAndConfiguringURP.html</a></p>
+<p>博客</p>
+<p><a href="https://blogs.unity3d.com/cn/2018/02/21/the-lightweight-render-pipeline-optimizing-real-time-performance/?_ga=2.2343157.45218148.1586951626-426189473.1585532237" target="_blank" rel="noopener">https://blogs.unity3d.com/cn/2018/02/21/the-lightweight-render-pipeline-optimizing-real-time-performance/?_ga=2.2343157.45218148.1586951626-426189473.1585532237</a></p>
+<h4 id="HDRP"><a href="#HDRP" class="headerlink" title="HDRP"></a>HDRP</h4><p>官网</p>
+<p><a href="https://unity.com/srp/High-Definition-Render-Pipeline" target="_blank" rel="noopener">https://unity.com/srp/High-Definition-Render-Pipeline</a></p>
+<p>文档</p>
+<p><a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@6.5/manual/index.html" target="_blank" rel="noopener">https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@6.5/manual/index.html</a></p>
+<h3 id="ECS"><a href="#ECS" class="headerlink" title="ECS"></a>ECS</h3><p><a href="https://docs.unity3d.com/Packages/com.unity.entities@0.7/manual/ecs_entity_query.html" target="_blank" rel="noopener">https://docs.unity3d.com/Packages/com.unity.entities@0.7/manual/ecs_entity_query.html</a></p>
+<h3 id="Hybird-render"><a href="#Hybird-render" class="headerlink" title="Hybird render"></a>Hybird render</h3><p><a href="https://docs.unity3d.com/Packages/com.unity.rendering.hybrid@0.3/api/Unity.Rendering.html" target="_blank" rel="noopener">https://docs.unity3d.com/Packages/com.unity.rendering.hybrid@0.3/api/Unity.Rendering.html</a></p>
+<h3 id="HLOD"><a href="#HLOD" class="headerlink" title="HLOD"></a>HLOD</h3><p><a href="https://forum.unity.com/threads/hlod-streaming-octahedral-impostors-using-megacity-subscenes.673390/" target="_blank" rel="noopener">https://forum.unity.com/threads/hlod-streaming-octahedral-impostors-using-megacity-subscenes.673390/</a></p>
+<h3 id="Blob-assets"><a href="#Blob-assets" class="headerlink" title="Blob assets"></a>Blob assets</h3><p><a href="https://github.com/Unity-Technologies/EntityComponentSystemSamples/tree/master/ECSSamples/Assets/Advanced/BlobAsset" target="_blank" rel="noopener">https://github.com/Unity-Technologies/EntityComponentSystemSamples/tree/master/ECSSamples/Assets/Advanced/BlobAsset</a></p>
+<h3 id="Burst"><a href="#Burst" class="headerlink" title="Burst"></a>Burst</h3><p><a href="https://docs.unity3d.com/Packages/com.unity.burst@1.2/manual/index.html#burst-user-guide" target="_blank" rel="noopener">https://docs.unity3d.com/Packages/com.unity.burst@1.2/manual/index.html#burst-user-guide</a></p>
+<h3 id="Odin-Inspector"><a href="#Odin-Inspector" class="headerlink" title="Odin Inspector"></a>Odin Inspector</h3><p><a href="https://www.jianshu.com/p/f1b27e85bc35" target="_blank" rel="noopener">https://www.jianshu.com/p/f1b27e85bc35</a></p>
 
       
     </div>
@@ -450,8 +399,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/06/19/Unity/%E6%8A%80%E6%9C%AF%E6%80%BB%E8%A7%88/" rel="next" title="Unity 技术总览">
-                <i class="fa fa-chevron-left"></i> Unity 技术总览
+              <a href="/2020/06/17/Unity/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9D%97/" rel="next" title="Unity/自定义模块">
+                <i class="fa fa-chevron-left"></i> Unity/自定义模块
               </a>
             
           </div>
@@ -460,8 +409,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/06/19/Unity/Use/" rel="prev" title="操作">
-                操作 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/06/18/Git/Git-%E5%9F%BA%E7%A1%80%E7%AF%87/" rel="prev" title="Git-基础篇">
+                Git-基础篇 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -565,7 +514,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -598,7 +547,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Jobsystem"><span class="nav-number">1.</span> <span class="nav-text">Jobsystem</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#addressable"><span class="nav-number">1.</span> <span class="nav-text">addressable</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#document"><span class="nav-number">2.</span> <span class="nav-text">document</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Unity-Blog"><span class="nav-number">3.</span> <span class="nav-text">Unity Blog</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Input-System"><span class="nav-number">4.</span> <span class="nav-text">Input System</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Asset-Import-Pipeline"><span class="nav-number">5.</span> <span class="nav-text">Asset Import Pipeline</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Render-Pipline"><span class="nav-number">6.</span> <span class="nav-text">Render Pipline</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#SRP"><span class="nav-number">6.1.</span> <span class="nav-text">SRP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#URP"><span class="nav-number">6.2.</span> <span class="nav-text">URP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HDRP"><span class="nav-number">6.3.</span> <span class="nav-text">HDRP</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ECS"><span class="nav-number">7.</span> <span class="nav-text">ECS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hybird-render"><span class="nav-number">8.</span> <span class="nav-text">Hybird render</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HLOD"><span class="nav-number">9.</span> <span class="nav-text">HLOD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Blob-assets"><span class="nav-number">10.</span> <span class="nav-text">Blob assets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Burst"><span class="nav-number">11.</span> <span class="nav-text">Burst</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Odin-Inspector"><span class="nav-number">12.</span> <span class="nav-text">Odin Inspector</span></a></li></ol></div>
             
 
           </div>
