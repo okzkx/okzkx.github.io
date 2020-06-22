@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="Editor 的调用及初始化Editor 界面点击调用静态方法菜单栏静态方法12[MenuItem(&quot;Tools&#x2F;Init&quot;)]static void Init() &amp;#123;&amp;#125;   Hierachy 或 Project 右键静态方法实际上就是菜单栏的 Assets 中的方法 12[MenuItem(&quot;Assets&#x2F;Create&amp;#x2">
+<meta name="description" content="打造一套完整的、免费的、从零开始的，博客建站、配置、美化、优化以及文章写作与发布工作流。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Unity&#x2F;Editor">
-<meta property="og:url" content="http://yoursite.com/2020/06/19/Unity/Editor/index.html">
+<meta property="og:title" content="搭建个人博客-基础篇">
+<meta property="og:url" content="http://yoursite.com/2020/06/16/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="OKZKX">
-<meta property="og:description" content="Editor 的调用及初始化Editor 界面点击调用静态方法菜单栏静态方法12[MenuItem(&quot;Tools&#x2F;Init&quot;)]static void Init() &amp;#123;&amp;#125;   Hierachy 或 Project 右键静态方法实际上就是菜单栏的 Assets 中的方法 12[MenuItem(&quot;Assets&#x2F;Create&amp;#x2">
+<meta property="og:description" content="打造一套完整的、免费的、从零开始的，博客建站、配置、美化、优化以及文章写作与发布工作流。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-06-19T10:04:49.720Z">
-<meta property="article:modified_time" content="2020-06-22T13:19:18.001Z">
+<meta property="article:published_time" content="2020-06-16T05:03:02.502Z">
+<meta property="article:modified_time" content="2020-06-22T13:30:41.630Z">
 <meta property="article:author" content="MEZKX">
 <meta property="article:tag" content="Unity">
 <meta property="article:tag" content="Graphic">
@@ -121,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/06/19/Unity/Editor/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/06/16/搭建个人博客/基础/"/>
 
 
 
 
 
-  <title>Unity/Editor | OKZKX</title>
+  <title>搭建个人博客-基础篇 | OKZKX</title>
   
 
 
@@ -264,7 +264,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/19/Unity/Editor/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/16/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E5%9F%BA%E7%A1%80/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="MEZKX">
@@ -281,7 +281,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Unity/Editor</h1>
+          <h1 class="post-title" itemprop="name headline">搭建个人博客-基础篇</h1>
         
 
         <div class="post-meta">
@@ -293,8 +293,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-19T18:04:49+08:00">
-                2020-06-19
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-16T13:03:02+08:00">
+                2020-06-16
               </time>
             
 
@@ -316,8 +316,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/" itemprop="url" rel="index">
-                    <span itemprop="name">Unity</span>
+                  <a href="/categories/Blog/" itemprop="url" rel="index">
+                    <span itemprop="name">Blog</span>
                   </a>
                 </span>
 
@@ -339,6 +339,10 @@
           
 
           
+              <div class="post-description">
+                  打造一套完整的、免费的、从零开始的，博客建站、配置、美化、优化以及文章写作与发布工作流。
+              </div>
+          
 
         </div>
       </header>
@@ -353,34 +357,58 @@
       
 
       
-        <h1 id="Editor-的调用及初始化"><a href="#Editor-的调用及初始化" class="headerlink" title="Editor 的调用及初始化"></a>Editor 的调用及初始化</h1><h2 id="Editor-界面点击调用静态方法"><a href="#Editor-界面点击调用静态方法" class="headerlink" title="Editor 界面点击调用静态方法"></a>Editor 界面点击调用静态方法</h2><h4 id="菜单栏静态方法"><a href="#菜单栏静态方法" class="headerlink" title="菜单栏静态方法"></a>菜单栏静态方法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[MenuItem(&quot;Tools&#x2F;Init&quot;)]</span><br><span class="line">static void Init() &#123;&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h4 id="Hierachy-或-Project-右键静态方法"><a href="#Hierachy-或-Project-右键静态方法" class="headerlink" title="Hierachy 或 Project 右键静态方法"></a>Hierachy 或 Project 右键静态方法</h4><p>实际上就是菜单栏的 Assets 中的方法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[MenuItem(&quot;Assets&#x2F;Create&#x2F;Init&quot;)]</span><br><span class="line">static void Init() &#123;&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="EditorWindow"><a href="#EditorWindow" class="headerlink" title="EditorWindow"></a>EditorWindow</h2><p>提供  snippet </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">using UnityEditor;</span><br><span class="line">using UnityEngine;</span><br><span class="line"></span><br><span class="line">public class $WindowName$EditorWindow : EditorWindow &#123;</span><br><span class="line">    public $WindowName$EditorWindow() &#123;</span><br><span class="line">        titleContent &#x3D; new GUIContent(&quot;$WindowName$&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    [MenuItem(&quot;Tools&#x2F;$WindowName$&quot;)]</span><br><span class="line">    static void Init() &#123;</span><br><span class="line">        var window &#x3D; GetWindow&lt;$WindowName$EditorWindow&gt;();</span><br><span class="line">        window.Show();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private void OnGUI() &#123;</span><br><span class="line">        </span><br><span class="line">		$selected$ $end$</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="EditorInspector"><a href="#EditorInspector" class="headerlink" title="EditorInspector"></a>EditorInspector</h2><p>提供  snippet </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">using UnityEditor;</span><br><span class="line">using UnityEngine;</span><br><span class="line"></span><br><span class="line">[CustomEditor(typeof($TargetClass$))]</span><br><span class="line">public class $TargetClass$Editor : Editor &#123;</span><br><span class="line">    public override void OnInspectorGUI() &#123;</span><br><span class="line">        serializedObject.Update();</span><br><span class="line">        $TargetClass$ comp &#x3D; target as $TargetClass$;</span><br><span class="line"></span><br><span class="line">		$selected$ $end$</span><br><span class="line"></span><br><span class="line">        serializedObject.ApplyModifiedProperties();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="界面渲染"><a href="#界面渲染" class="headerlink" title="界面渲染"></a>界面渲染</h2><p>移步 <a href="/2020/06/17/Unity/OnGUI/">Unity/OnGUI</a></p>
-<h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><h3 id="综合"><a href="#综合" class="headerlink" title="综合"></a>综合</h3><p><a href="https://www.jianshu.com/p/97520d98a1f2" target="_blank" rel="noopener">UnityEditor-Windows编辑器与Inspector编辑器详细教程</a></p>
-<p><a href="https://www.jianshu.com/p/8432ad6fac64" target="_blank" rel="noopener">Unity Editor基础篇</a></p>
-<h3 id="EditorWindow-1"><a href="#EditorWindow-1" class="headerlink" title="EditorWindow"></a>EditorWindow</h3><p><a href="https://blog.csdn.net/qq_35030499/article/details/88350521" target="_blank" rel="noopener">https://blog.csdn.net/qq_35030499/article/details/88350521</a></p>
-<p><a href="https://docs.unity3d.com/ScriptReference/EditorWindow.html" target="_blank" rel="noopener">https://docs.unity3d.com/ScriptReference/EditorWindow.html</a></p>
-<h3 id="资源管理"><a href="#资源管理" class="headerlink" title="资源管理"></a>资源管理</h3><p><a href="https://blog.csdn.net/weixin_42540271/article/details/90761102" target="_blank" rel="noopener">Unity编辑器扩展之Project视图面板</a></p>
-<p><a href="https://blog.csdn.net/weixin_42540271/article/details/90815480" target="_blank" rel="noopener">原创 （二）Unity编辑器扩展之Hierarchy视图面板</a></p>
-<p><a href="https://blog.csdn.net/weixin_42540271/article/details/104622939" target="_blank" rel="noopener">原创 Unity小工具一 自动改变导入图片类型为sprite模式</a></p>
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><h3 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h3><p>使用 MarkDown 写好博客，然后发布到个人的公开网站上，博客可以给任何人查看。</p>
+<p>不需要任何费用，只需要注册 Github，网站完全是你自己的，同时内容的迁移非常方便。</p>
+<p>你现在阅读的这整个博客站就是该效果体现。</p>
+<h3 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h3><ul>
+<li>Markdown + Typora</li>
+<li>Git + Github + GithubPage</li>
+<li>node.js + Hexo + NexT</li>
+</ul>
+<p>在下面的内容中我会一步一步对上面的所有工具进行讲解</p>
+<h3 id="阅读完本篇文章你的收获"><a href="#阅读完本篇文章你的收获" class="headerlink" title="阅读完本篇文章你的收获"></a>阅读完本篇文章你的收获</h3><ol>
+<li>高效美观的进行知识储备</li>
+<li>亲手打造一个专属于自己的知识分享平台</li>
+<li>如何让自己的知识分享平台全网可见</li>
+<li>便利的知识分享和发布流程</li>
+</ol>
+<h3 id="本文的终极目标"><a href="#本文的终极目标" class="headerlink" title="本文的终极目标"></a>本文的终极目标</h3><p>打造一套完整的、免费的、从零开始的，博客建站、配置、美化、优化以及文章写作与发布工作流。</p>
+<p>OK let‘s go</p>
+<h2 id="工具和技能介绍"><a href="#工具和技能介绍" class="headerlink" title="工具和技能介绍"></a>工具和技能介绍</h2><h3 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a>Markdown</h3><ol>
+<li>Markdown 写作语法</li>
+</ol>
+<p><a href="https://www.baidu.com/link?url=K8P5Jt2E-bnXSJ5ykWfQMOQhofYt0new3Uee6zK2Id60GQ3LV7TB31qmK9Jmo5GS3Gs4TAghfXtw8X2SQOVDpq&wd=&eqid=af1d85d20014ee96000000065eead21b" target="_blank" rel="noopener"><em>Markdown</em> 教程 | 菜鸟教程</a></p>
+<ol start="2">
+<li>Markdown 文本编辑工具</li>
+</ol>
+<p><a href="https://typora.io/" target="_blank" rel="noopener">Typora</a> (推荐)</p>
+<p>VS Code + 插件</p>
+<h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><p>Git 是版本控制工具，如果将写项目比作打游戏，那么 Git 提供了游戏中的存档功能。</p>
+<p><a href="/2020/06/18/Git/">Git 学习资料</a>  </p>
+<h3 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h3><p>按照游戏存档理论，Github 是免费的云存档</p>
+<p>了解 Github 更多请自行百度，或注册体验。</p>
+<h3 id="GithubPage"><a href="#GithubPage" class="headerlink" title="GithubPage"></a>GithubPage</h3><p>GithubPage 是 Github 的一项服务，可以展示你存储的项目中的静态网页。</p>
+<p>接下来的云端博客将根据这个功能搭建。</p>
+<h3 id="node-js"><a href="#node-js" class="headerlink" title="node.js"></a>node.js</h3><p>这边作为 Hexo 的下载器使用</p>
+<h3 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h3><p>可以将你的 Markdown 文档渲染成（自动生成）静态网页 </p>
+<h3 id="NexT"><a href="#NexT" class="headerlink" title="NexT"></a>NexT</h3><p>Hexo 的一个插件，改变渲染样式</p>
+<h2 id="此方法搭建博客的理论规划"><a href="#此方法搭建博客的理论规划" class="headerlink" title="此方法搭建博客的理论规划"></a>此方法搭建博客的理论规划</h2><ol>
+<li><p>写好 Markdown 文档</p>
+</li>
+<li><p>Hexo 将 Markdown 文档渲染成（自动生成）静态网页 </p>
+</li>
+<li><p>Git 推送这些静态网页进入 Github</p>
+</li>
+</ol>
+<h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><h3 id="接下来进入正题"><a href="#接下来进入正题" class="headerlink" title="接下来进入正题"></a>接下来进入正题</h3><p>真正开始动手了</p>
+<ol>
+<li><p>安装 <a href="https://typora.io/" target="_blank" rel="noopener">Typora</a></p>
+</li>
+<li><p>根据 <a href="https://www.jianshu.com/p/4f56cf990bba" target="_blank" rel="noopener">使用Github搭建属于自己的博客</a> 直到博客发布成功</p>
+</li>
+<li><p>美化 <a href="/2020/06/18/搭建个人博客-美化篇/">搭建个人博客-美化篇</a></p>
+</li>
+</ol>
 
       
     </div>
@@ -405,8 +433,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/06/19/Unity/%E8%B0%83%E8%AF%95%E5%AE%89%E5%8D%93%E6%9C%BA/" rel="next" title="Unity/调试安卓机">
-                <i class="fa fa-chevron-left"></i> Unity/调试安卓机
+              <a href="/2020/05/14/Git/GitHub/" rel="next" title="Git/GitHub">
+                <i class="fa fa-chevron-left"></i> Git/GitHub
               </a>
             
           </div>
@@ -415,8 +443,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/06/19/Unity/JobSystem/" rel="prev" title="Unity/JobSystem">
-                Unity/JobSystem <i class="fa fa-chevron-right"></i>
+              <a href="/2020/06/16/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E7%BE%8E%E5%8C%96/" rel="prev" title="搭建个人博客-美化篇">
+                搭建个人博客-美化篇 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -544,7 +572,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Editor-的调用及初始化"><span class="nav-number">1.</span> <span class="nav-text">Editor 的调用及初始化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Editor-界面点击调用静态方法"><span class="nav-number">1.1.</span> <span class="nav-text">Editor 界面点击调用静态方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#菜单栏静态方法"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">菜单栏静态方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Hierachy-或-Project-右键静态方法"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">Hierachy 或 Project 右键静态方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EditorWindow"><span class="nav-number">1.2.</span> <span class="nav-text">EditorWindow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EditorInspector"><span class="nav-number">1.3.</span> <span class="nav-text">EditorInspector</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#界面渲染"><span class="nav-number">1.4.</span> <span class="nav-text">界面渲染</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#资料"><span class="nav-number">1.5.</span> <span class="nav-text">资料</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#综合"><span class="nav-number">1.5.1.</span> <span class="nav-text">综合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#EditorWindow-1"><span class="nav-number">1.5.2.</span> <span class="nav-text">EditorWindow</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#资源管理"><span class="nav-number">1.5.3.</span> <span class="nav-text">资源管理</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#最终效果"><span class="nav-number">1.1.</span> <span class="nav-text">最终效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工具"><span class="nav-number">1.2.</span> <span class="nav-text">工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阅读完本篇文章你的收获"><span class="nav-number">1.3.</span> <span class="nav-text">阅读完本篇文章你的收获</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本文的终极目标"><span class="nav-number">1.4.</span> <span class="nav-text">本文的终极目标</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工具和技能介绍"><span class="nav-number">2.</span> <span class="nav-text">工具和技能介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Markdown"><span class="nav-number">2.1.</span> <span class="nav-text">Markdown</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git"><span class="nav-number">2.2.</span> <span class="nav-text">Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Github"><span class="nav-number">2.3.</span> <span class="nav-text">Github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GithubPage"><span class="nav-number">2.4.</span> <span class="nav-text">GithubPage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#node-js"><span class="nav-number">2.5.</span> <span class="nav-text">node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo"><span class="nav-number">2.6.</span> <span class="nav-text">Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NexT"><span class="nav-number">2.7.</span> <span class="nav-text">NexT</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#此方法搭建博客的理论规划"><span class="nav-number">3.</span> <span class="nav-text">此方法搭建博客的理论规划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作步骤"><span class="nav-number">4.</span> <span class="nav-text">操作步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#接下来进入正题"><span class="nav-number">4.1.</span> <span class="nav-text">接下来进入正题</span></a></li></ol></li></ol></div>
             
 
           </div>

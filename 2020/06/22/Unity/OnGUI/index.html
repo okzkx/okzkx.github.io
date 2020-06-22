@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="Editor 的调用及初始化Editor 界面点击调用静态方法菜单栏静态方法12[MenuItem(&quot;Tools&#x2F;Init&quot;)]static void Init() &amp;#123;&amp;#125;   Hierachy 或 Project 右键静态方法实际上就是菜单栏的 Assets 中的方法 12[MenuItem(&quot;Assets&#x2F;Create&amp;#x2">
+<meta name="description" content="OnGUI纯使用代码绘制 GUI，相比 UGUI 好处是 工作量少，移植方便，兼容性好。 缺点是 没法所见即所得，不美观，没法实现复杂的功能。 四个绘制控件工具类这四个类都能绘制控件，绘制的控件类型，环境有所区别。 GUI GUILayout EditorGUI EditorGUILayout 名词解释Editor 只能运行在编辑器中，不加可运行于任何时 Layout 自定义布局，可以省去参数定位">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Unity&#x2F;Editor">
-<meta property="og:url" content="http://yoursite.com/2020/06/19/Unity/Editor/index.html">
+<meta property="og:title" content="Unity&#x2F;OnGUI">
+<meta property="og:url" content="http://yoursite.com/2020/06/22/Unity/OnGUI/index.html">
 <meta property="og:site_name" content="OKZKX">
-<meta property="og:description" content="Editor 的调用及初始化Editor 界面点击调用静态方法菜单栏静态方法12[MenuItem(&quot;Tools&#x2F;Init&quot;)]static void Init() &amp;#123;&amp;#125;   Hierachy 或 Project 右键静态方法实际上就是菜单栏的 Assets 中的方法 12[MenuItem(&quot;Assets&#x2F;Create&amp;#x2">
+<meta property="og:description" content="OnGUI纯使用代码绘制 GUI，相比 UGUI 好处是 工作量少，移植方便，兼容性好。 缺点是 没法所见即所得，不美观，没法实现复杂的功能。 四个绘制控件工具类这四个类都能绘制控件，绘制的控件类型，环境有所区别。 GUI GUILayout EditorGUI EditorGUILayout 名词解释Editor 只能运行在编辑器中，不加可运行于任何时 Layout 自定义布局，可以省去参数定位">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-06-19T10:04:49.720Z">
-<meta property="article:modified_time" content="2020-06-22T13:19:18.001Z">
+<meta property="article:published_time" content="2020-06-22T01:44:45.762Z">
+<meta property="article:modified_time" content="2020-06-22T13:19:28.172Z">
 <meta property="article:author" content="MEZKX">
 <meta property="article:tag" content="Unity">
 <meta property="article:tag" content="Graphic">
@@ -121,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/06/19/Unity/Editor/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/06/22/Unity/OnGUI/"/>
 
 
 
 
 
-  <title>Unity/Editor | OKZKX</title>
+  <title>Unity/OnGUI | OKZKX</title>
   
 
 
@@ -264,7 +264,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/19/Unity/Editor/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/22/Unity/OnGUI/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="MEZKX">
@@ -281,7 +281,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Unity/Editor</h1>
+          <h1 class="post-title" itemprop="name headline">Unity/OnGUI</h1>
         
 
         <div class="post-meta">
@@ -293,8 +293,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-19T18:04:49+08:00">
-                2020-06-19
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-22T09:44:45+08:00">
+                2020-06-22
               </time>
             
 
@@ -353,34 +353,45 @@
       
 
       
-        <h1 id="Editor-的调用及初始化"><a href="#Editor-的调用及初始化" class="headerlink" title="Editor 的调用及初始化"></a>Editor 的调用及初始化</h1><h2 id="Editor-界面点击调用静态方法"><a href="#Editor-界面点击调用静态方法" class="headerlink" title="Editor 界面点击调用静态方法"></a>Editor 界面点击调用静态方法</h2><h4 id="菜单栏静态方法"><a href="#菜单栏静态方法" class="headerlink" title="菜单栏静态方法"></a>菜单栏静态方法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[MenuItem(&quot;Tools&#x2F;Init&quot;)]</span><br><span class="line">static void Init() &#123;&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h4 id="Hierachy-或-Project-右键静态方法"><a href="#Hierachy-或-Project-右键静态方法" class="headerlink" title="Hierachy 或 Project 右键静态方法"></a>Hierachy 或 Project 右键静态方法</h4><p>实际上就是菜单栏的 Assets 中的方法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[MenuItem(&quot;Assets&#x2F;Create&#x2F;Init&quot;)]</span><br><span class="line">static void Init() &#123;&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="EditorWindow"><a href="#EditorWindow" class="headerlink" title="EditorWindow"></a>EditorWindow</h2><p>提供  snippet </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">using UnityEditor;</span><br><span class="line">using UnityEngine;</span><br><span class="line"></span><br><span class="line">public class $WindowName$EditorWindow : EditorWindow &#123;</span><br><span class="line">    public $WindowName$EditorWindow() &#123;</span><br><span class="line">        titleContent &#x3D; new GUIContent(&quot;$WindowName$&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    [MenuItem(&quot;Tools&#x2F;$WindowName$&quot;)]</span><br><span class="line">    static void Init() &#123;</span><br><span class="line">        var window &#x3D; GetWindow&lt;$WindowName$EditorWindow&gt;();</span><br><span class="line">        window.Show();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private void OnGUI() &#123;</span><br><span class="line">        </span><br><span class="line">		$selected$ $end$</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="EditorInspector"><a href="#EditorInspector" class="headerlink" title="EditorInspector"></a>EditorInspector</h2><p>提供  snippet </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">using UnityEditor;</span><br><span class="line">using UnityEngine;</span><br><span class="line"></span><br><span class="line">[CustomEditor(typeof($TargetClass$))]</span><br><span class="line">public class $TargetClass$Editor : Editor &#123;</span><br><span class="line">    public override void OnInspectorGUI() &#123;</span><br><span class="line">        serializedObject.Update();</span><br><span class="line">        $TargetClass$ comp &#x3D; target as $TargetClass$;</span><br><span class="line"></span><br><span class="line">		$selected$ $end$</span><br><span class="line"></span><br><span class="line">        serializedObject.ApplyModifiedProperties();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="界面渲染"><a href="#界面渲染" class="headerlink" title="界面渲染"></a>界面渲染</h2><p>移步 <a href="/2020/06/17/Unity/OnGUI/">Unity/OnGUI</a></p>
-<h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><h3 id="综合"><a href="#综合" class="headerlink" title="综合"></a>综合</h3><p><a href="https://www.jianshu.com/p/97520d98a1f2" target="_blank" rel="noopener">UnityEditor-Windows编辑器与Inspector编辑器详细教程</a></p>
-<p><a href="https://www.jianshu.com/p/8432ad6fac64" target="_blank" rel="noopener">Unity Editor基础篇</a></p>
-<h3 id="EditorWindow-1"><a href="#EditorWindow-1" class="headerlink" title="EditorWindow"></a>EditorWindow</h3><p><a href="https://blog.csdn.net/qq_35030499/article/details/88350521" target="_blank" rel="noopener">https://blog.csdn.net/qq_35030499/article/details/88350521</a></p>
-<p><a href="https://docs.unity3d.com/ScriptReference/EditorWindow.html" target="_blank" rel="noopener">https://docs.unity3d.com/ScriptReference/EditorWindow.html</a></p>
-<h3 id="资源管理"><a href="#资源管理" class="headerlink" title="资源管理"></a>资源管理</h3><p><a href="https://blog.csdn.net/weixin_42540271/article/details/90761102" target="_blank" rel="noopener">Unity编辑器扩展之Project视图面板</a></p>
-<p><a href="https://blog.csdn.net/weixin_42540271/article/details/90815480" target="_blank" rel="noopener">原创 （二）Unity编辑器扩展之Hierarchy视图面板</a></p>
-<p><a href="https://blog.csdn.net/weixin_42540271/article/details/104622939" target="_blank" rel="noopener">原创 Unity小工具一 自动改变导入图片类型为sprite模式</a></p>
+        <h1 id="OnGUI"><a href="#OnGUI" class="headerlink" title="OnGUI"></a>OnGUI</h1><p>纯使用代码绘制 GUI，相比 UGUI</p>
+<p>好处是 工作量少，移植方便，兼容性好。</p>
+<p>缺点是 没法所见即所得，不美观，没法实现复杂的功能。</p>
+<h2 id="四个绘制控件工具类"><a href="#四个绘制控件工具类" class="headerlink" title="四个绘制控件工具类"></a>四个绘制控件工具类</h2><p>这四个类都能绘制控件，绘制的控件类型，环境有所区别。</p>
+<p>GUI</p>
+<p>GUILayout</p>
+<p>EditorGUI</p>
+<p>EditorGUILayout</p>
+<h4 id="名词解释"><a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h4><p>Editor</p>
+<p>只能运行在编辑器中，不加可运行于任何时</p>
+<p>Layout</p>
+<p>自定义布局，可以省去参数定位布局位置</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>从上到下限定越来越严格</p>
+<p>下部分依赖于上部分实现</p>
+<p>所以一般来说 EditorGUILayout 是最好用的，可用区域最小的。</p>
+<p>所以绘制工具类选择的优先级为从下到上</p>
+<h2 id="所有控件"><a href="#所有控件" class="headerlink" title="所有控件"></a>所有控件</h2><p>所有控件包括</p>
+<p>scrollView</p>
+<p>Scrollbar</p>
+<p>Slider</p>
+<p>window</p>
+<p>toggle</p>
+<p>button</p>
+<p>textArea </p>
+<p>textField</p>
+<p>label</p>
+<p>box</p>
+<h2 id="绘制样式"><a href="#绘制样式" class="headerlink" title="绘制样式"></a>绘制样式</h2><p>获取当前的 GUI 所有控件样式</p>
+<p><code>GUI.Skin</code></p>
+<p>也可以获取 Unity 内置的 OnGUI 样式</p>
+<p><code>EditorStyles</code></p>
+<p>样式表 <code>GUIStyle</code></p>
+<p>每种控件的样式表设置都不一样</p>
+<p>可以在绘制控件时单独指定样式表，</p>
+<p>也可以统一设置某种控件的样式表。</p>
+<h2 id="控件内容"><a href="#控件内容" class="headerlink" title="控件内容"></a>控件内容</h2><h4 id="GUIContent"><a href="#GUIContent" class="headerlink" title="GUIContent"></a>GUIContent</h4><p>一个控件内可以有一个控件内容 GUIContent，控件会自动布局 GUIConetent ，可以由三部分组成 text,image,tooltip。</p>
+<p>一般在绘制控件的 API 中，可以简化 CUIContent 的实例化，直接传入 text，内部自动将其实例化为 GUIContent</p>
+<h2 id="布局辅助类"><a href="#布局辅助类" class="headerlink" title="布局辅助类"></a>布局辅助类</h2><h4 id="GUILayoutOption"><a href="#GUILayoutOption" class="headerlink" title="GUILayoutOption"></a>GUILayoutOption</h4><p>让 GUILayout 可以进行一些自定义的布局。</p>
+<p>从 GUILayout 设置一些当前控件对布局的影响即可， 获取  GUILayoutOption 即可</p>
 
       
     </div>
@@ -405,8 +416,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/06/19/Unity/%E8%B0%83%E8%AF%95%E5%AE%89%E5%8D%93%E6%9C%BA/" rel="next" title="Unity/调试安卓机">
-                <i class="fa fa-chevron-left"></i> Unity/调试安卓机
+              <a href="/2020/06/19/Unity/%E6%8A%80%E6%9C%AF%E6%80%BB%E8%A7%88/" rel="next" title="Unity/技术总览">
+                <i class="fa fa-chevron-left"></i> Unity/技术总览
               </a>
             
           </div>
@@ -415,8 +426,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/06/19/Unity/JobSystem/" rel="prev" title="Unity/JobSystem">
-                Unity/JobSystem <i class="fa fa-chevron-right"></i>
+              <a href="/2020/06/22/Unity/UGUI/" rel="prev" title="Unity/UGUI">
+                Unity/UGUI <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -544,7 +555,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Editor-的调用及初始化"><span class="nav-number">1.</span> <span class="nav-text">Editor 的调用及初始化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Editor-界面点击调用静态方法"><span class="nav-number">1.1.</span> <span class="nav-text">Editor 界面点击调用静态方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#菜单栏静态方法"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">菜单栏静态方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Hierachy-或-Project-右键静态方法"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">Hierachy 或 Project 右键静态方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EditorWindow"><span class="nav-number">1.2.</span> <span class="nav-text">EditorWindow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EditorInspector"><span class="nav-number">1.3.</span> <span class="nav-text">EditorInspector</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#界面渲染"><span class="nav-number">1.4.</span> <span class="nav-text">界面渲染</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#资料"><span class="nav-number">1.5.</span> <span class="nav-text">资料</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#综合"><span class="nav-number">1.5.1.</span> <span class="nav-text">综合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#EditorWindow-1"><span class="nav-number">1.5.2.</span> <span class="nav-text">EditorWindow</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#资源管理"><span class="nav-number">1.5.3.</span> <span class="nav-text">资源管理</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OnGUI"><span class="nav-number">1.</span> <span class="nav-text">OnGUI</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#四个绘制控件工具类"><span class="nav-number">1.1.</span> <span class="nav-text">四个绘制控件工具类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#名词解释"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">名词解释</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">1.1.1.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#所有控件"><span class="nav-number">1.2.</span> <span class="nav-text">所有控件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绘制样式"><span class="nav-number">1.3.</span> <span class="nav-text">绘制样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#控件内容"><span class="nav-number">1.4.</span> <span class="nav-text">控件内容</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GUIContent"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">GUIContent</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布局辅助类"><span class="nav-number">1.5.</span> <span class="nav-text">布局辅助类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GUILayoutOption"><span class="nav-number">1.5.0.1.</span> <span class="nav-text">GUILayoutOption</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>

@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="Editor 的调用及初始化Editor 界面点击调用静态方法菜单栏静态方法12[MenuItem(&quot;Tools&#x2F;Init&quot;)]static void Init() &amp;#123;&amp;#125;   Hierachy 或 Project 右键静态方法实际上就是菜单栏的 Assets 中的方法 12[MenuItem(&quot;Assets&#x2F;Create&amp;#x2">
+<meta name="description" content="addressabledocumenthttps:&#x2F;&#x2F;docs.unity3d.com&#x2F;Packages&#x2F;com.unity.addressables@1.7&#x2F;manual&#x2F;index.html Unity Bloghttps:&#x2F;&#x2F;blogs.unity3d.com&#x2F; Input SystemAsset Import PipelineBlog https:&#x2F;&#x2F;blogs.unity3d.com&#x2F;2">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Unity&#x2F;Editor">
-<meta property="og:url" content="http://yoursite.com/2020/06/19/Unity/Editor/index.html">
+<meta property="og:title" content="Unity&#x2F;技术总览">
+<meta property="og:url" content="http://yoursite.com/2020/06/19/Unity/%E6%8A%80%E6%9C%AF%E6%80%BB%E8%A7%88/index.html">
 <meta property="og:site_name" content="OKZKX">
-<meta property="og:description" content="Editor 的调用及初始化Editor 界面点击调用静态方法菜单栏静态方法12[MenuItem(&quot;Tools&#x2F;Init&quot;)]static void Init() &amp;#123;&amp;#125;   Hierachy 或 Project 右键静态方法实际上就是菜单栏的 Assets 中的方法 12[MenuItem(&quot;Assets&#x2F;Create&amp;#x2">
+<meta property="og:description" content="addressabledocumenthttps:&#x2F;&#x2F;docs.unity3d.com&#x2F;Packages&#x2F;com.unity.addressables@1.7&#x2F;manual&#x2F;index.html Unity Bloghttps:&#x2F;&#x2F;blogs.unity3d.com&#x2F; Input SystemAsset Import PipelineBlog https:&#x2F;&#x2F;blogs.unity3d.com&#x2F;2">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-06-19T10:04:49.720Z">
-<meta property="article:modified_time" content="2020-06-22T13:19:18.001Z">
+<meta property="article:published_time" content="2020-06-19T10:04:49.772Z">
+<meta property="article:modified_time" content="2020-06-22T13:26:56.957Z">
 <meta property="article:author" content="MEZKX">
 <meta property="article:tag" content="Unity">
 <meta property="article:tag" content="Graphic">
@@ -121,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/06/19/Unity/Editor/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/06/19/Unity/技术总览/"/>
 
 
 
 
 
-  <title>Unity/Editor | OKZKX</title>
+  <title>Unity/技术总览 | OKZKX</title>
   
 
 
@@ -264,7 +264,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/19/Unity/Editor/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/19/Unity/%E6%8A%80%E6%9C%AF%E6%80%BB%E8%A7%88/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="MEZKX">
@@ -281,7 +281,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Unity/Editor</h1>
+          <h1 class="post-title" itemprop="name headline">Unity/技术总览</h1>
         
 
         <div class="post-meta">
@@ -353,34 +353,28 @@
       
 
       
-        <h1 id="Editor-的调用及初始化"><a href="#Editor-的调用及初始化" class="headerlink" title="Editor 的调用及初始化"></a>Editor 的调用及初始化</h1><h2 id="Editor-界面点击调用静态方法"><a href="#Editor-界面点击调用静态方法" class="headerlink" title="Editor 界面点击调用静态方法"></a>Editor 界面点击调用静态方法</h2><h4 id="菜单栏静态方法"><a href="#菜单栏静态方法" class="headerlink" title="菜单栏静态方法"></a>菜单栏静态方法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[MenuItem(&quot;Tools&#x2F;Init&quot;)]</span><br><span class="line">static void Init() &#123;&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h4 id="Hierachy-或-Project-右键静态方法"><a href="#Hierachy-或-Project-右键静态方法" class="headerlink" title="Hierachy 或 Project 右键静态方法"></a>Hierachy 或 Project 右键静态方法</h4><p>实际上就是菜单栏的 Assets 中的方法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[MenuItem(&quot;Assets&#x2F;Create&#x2F;Init&quot;)]</span><br><span class="line">static void Init() &#123;&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="EditorWindow"><a href="#EditorWindow" class="headerlink" title="EditorWindow"></a>EditorWindow</h2><p>提供  snippet </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">using UnityEditor;</span><br><span class="line">using UnityEngine;</span><br><span class="line"></span><br><span class="line">public class $WindowName$EditorWindow : EditorWindow &#123;</span><br><span class="line">    public $WindowName$EditorWindow() &#123;</span><br><span class="line">        titleContent &#x3D; new GUIContent(&quot;$WindowName$&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    [MenuItem(&quot;Tools&#x2F;$WindowName$&quot;)]</span><br><span class="line">    static void Init() &#123;</span><br><span class="line">        var window &#x3D; GetWindow&lt;$WindowName$EditorWindow&gt;();</span><br><span class="line">        window.Show();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private void OnGUI() &#123;</span><br><span class="line">        </span><br><span class="line">		$selected$ $end$</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="EditorInspector"><a href="#EditorInspector" class="headerlink" title="EditorInspector"></a>EditorInspector</h2><p>提供  snippet </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">using UnityEditor;</span><br><span class="line">using UnityEngine;</span><br><span class="line"></span><br><span class="line">[CustomEditor(typeof($TargetClass$))]</span><br><span class="line">public class $TargetClass$Editor : Editor &#123;</span><br><span class="line">    public override void OnInspectorGUI() &#123;</span><br><span class="line">        serializedObject.Update();</span><br><span class="line">        $TargetClass$ comp &#x3D; target as $TargetClass$;</span><br><span class="line"></span><br><span class="line">		$selected$ $end$</span><br><span class="line"></span><br><span class="line">        serializedObject.ApplyModifiedProperties();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="界面渲染"><a href="#界面渲染" class="headerlink" title="界面渲染"></a>界面渲染</h2><p>移步 <a href="/2020/06/17/Unity/OnGUI/">Unity/OnGUI</a></p>
-<h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><h3 id="综合"><a href="#综合" class="headerlink" title="综合"></a>综合</h3><p><a href="https://www.jianshu.com/p/97520d98a1f2" target="_blank" rel="noopener">UnityEditor-Windows编辑器与Inspector编辑器详细教程</a></p>
-<p><a href="https://www.jianshu.com/p/8432ad6fac64" target="_blank" rel="noopener">Unity Editor基础篇</a></p>
-<h3 id="EditorWindow-1"><a href="#EditorWindow-1" class="headerlink" title="EditorWindow"></a>EditorWindow</h3><p><a href="https://blog.csdn.net/qq_35030499/article/details/88350521" target="_blank" rel="noopener">https://blog.csdn.net/qq_35030499/article/details/88350521</a></p>
-<p><a href="https://docs.unity3d.com/ScriptReference/EditorWindow.html" target="_blank" rel="noopener">https://docs.unity3d.com/ScriptReference/EditorWindow.html</a></p>
-<h3 id="资源管理"><a href="#资源管理" class="headerlink" title="资源管理"></a>资源管理</h3><p><a href="https://blog.csdn.net/weixin_42540271/article/details/90761102" target="_blank" rel="noopener">Unity编辑器扩展之Project视图面板</a></p>
-<p><a href="https://blog.csdn.net/weixin_42540271/article/details/90815480" target="_blank" rel="noopener">原创 （二）Unity编辑器扩展之Hierarchy视图面板</a></p>
-<p><a href="https://blog.csdn.net/weixin_42540271/article/details/104622939" target="_blank" rel="noopener">原创 Unity小工具一 自动改变导入图片类型为sprite模式</a></p>
+        <h3 id="addressable"><a href="#addressable" class="headerlink" title="addressable"></a>addressable</h3><h3 id="document"><a href="#document" class="headerlink" title="document"></a>document</h3><p><a href="https://docs.unity3d.com/Packages/com.unity.addressables@1.7/manual/index.html" target="_blank" rel="noopener">https://docs.unity3d.com/Packages/com.unity.addressables@1.7/manual/index.html</a></p>
+<h3 id="Unity-Blog"><a href="#Unity-Blog" class="headerlink" title="Unity Blog"></a>Unity Blog</h3><p><a href="https://blogs.unity3d.com/" target="_blank" rel="noopener">https://blogs.unity3d.com/</a></p>
+<h3 id="Input-System"><a href="#Input-System" class="headerlink" title="Input System"></a>Input System</h3><h3 id="Asset-Import-Pipeline"><a href="#Asset-Import-Pipeline" class="headerlink" title="Asset Import Pipeline"></a>Asset Import Pipeline</h3><p>Blog</p>
+<p><a href="https://blogs.unity3d.com/2019/10/31/the-new-asset-import-pipeline-solid-foundation-for-speeding-up-asset-imports/" target="_blank" rel="noopener">https://blogs.unity3d.com/2019/10/31/the-new-asset-import-pipeline-solid-foundation-for-speeding-up-asset-imports/</a></p>
+<h3 id="Render-Pipline"><a href="#Render-Pipline" class="headerlink" title="Render Pipline"></a>Render Pipline</h3><h4 id="SRP"><a href="#SRP" class="headerlink" title="SRP"></a>SRP</h4><p>官网</p>
+<p><a href="https://unity.com/cn/srp" target="_blank" rel="noopener">https://unity.com/cn/srp</a></p>
+<h4 id="URP"><a href="#URP" class="headerlink" title="URP"></a>URP</h4><p>官网</p>
+<p><a href="https://unity.com/cn/srp/universal-render-pipeline" target="_blank" rel="noopener">https://unity.com/cn/srp/universal-render-pipeline</a></p>
+<p>文档</p>
+<p><a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@9.0/manual/InstallingAndConfiguringURP.html" target="_blank" rel="noopener">https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@9.0/manual/InstallingAndConfiguringURP.html</a></p>
+<p>博客</p>
+<p><a href="https://blogs.unity3d.com/cn/2018/02/21/the-lightweight-render-pipeline-optimizing-real-time-performance/?_ga=2.2343157.45218148.1586951626-426189473.1585532237" target="_blank" rel="noopener">https://blogs.unity3d.com/cn/2018/02/21/the-lightweight-render-pipeline-optimizing-real-time-performance/?_ga=2.2343157.45218148.1586951626-426189473.1585532237</a></p>
+<h4 id="HDRP"><a href="#HDRP" class="headerlink" title="HDRP"></a>HDRP</h4><p>官网</p>
+<p><a href="https://unity.com/srp/High-Definition-Render-Pipeline" target="_blank" rel="noopener">https://unity.com/srp/High-Definition-Render-Pipeline</a></p>
+<p>文档</p>
+<p><a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@6.5/manual/index.html" target="_blank" rel="noopener">https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@6.5/manual/index.html</a></p>
+<h3 id="ECS"><a href="#ECS" class="headerlink" title="ECS"></a>ECS</h3><p><a href="https://docs.unity3d.com/Packages/com.unity.entities@0.7/manual/ecs_entity_query.html" target="_blank" rel="noopener">https://docs.unity3d.com/Packages/com.unity.entities@0.7/manual/ecs_entity_query.html</a></p>
+<h3 id="Hybird-render"><a href="#Hybird-render" class="headerlink" title="Hybird render"></a>Hybird render</h3><p><a href="https://docs.unity3d.com/Packages/com.unity.rendering.hybrid@0.3/api/Unity.Rendering.html" target="_blank" rel="noopener">https://docs.unity3d.com/Packages/com.unity.rendering.hybrid@0.3/api/Unity.Rendering.html</a></p>
+<h3 id="HLOD"><a href="#HLOD" class="headerlink" title="HLOD"></a>HLOD</h3><p><a href="https://forum.unity.com/threads/hlod-streaming-octahedral-impostors-using-megacity-subscenes.673390/" target="_blank" rel="noopener">https://forum.unity.com/threads/hlod-streaming-octahedral-impostors-using-megacity-subscenes.673390/</a></p>
+<h3 id="Blob-assets"><a href="#Blob-assets" class="headerlink" title="Blob assets"></a>Blob assets</h3><p><a href="https://github.com/Unity-Technologies/EntityComponentSystemSamples/tree/master/ECSSamples/Assets/Advanced/BlobAsset" target="_blank" rel="noopener">https://github.com/Unity-Technologies/EntityComponentSystemSamples/tree/master/ECSSamples/Assets/Advanced/BlobAsset</a></p>
+<h3 id="Burst"><a href="#Burst" class="headerlink" title="Burst"></a>Burst</h3><p><a href="https://docs.unity3d.com/Packages/com.unity.burst@1.2/manual/index.html#burst-user-guide" target="_blank" rel="noopener">https://docs.unity3d.com/Packages/com.unity.burst@1.2/manual/index.html#burst-user-guide</a></p>
+<h3 id="Odin-Inspector"><a href="#Odin-Inspector" class="headerlink" title="Odin Inspector"></a>Odin Inspector</h3><p><a href="https://www.jianshu.com/p/f1b27e85bc35" target="_blank" rel="noopener">https://www.jianshu.com/p/f1b27e85bc35</a></p>
 
       
     </div>
@@ -405,8 +399,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/06/19/Unity/%E8%B0%83%E8%AF%95%E5%AE%89%E5%8D%93%E6%9C%BA/" rel="next" title="Unity/调试安卓机">
-                <i class="fa fa-chevron-left"></i> Unity/调试安卓机
+              <a href="/2020/06/19/Unity/SubScene/" rel="next" title="Unity/SubScene">
+                <i class="fa fa-chevron-left"></i> Unity/SubScene
               </a>
             
           </div>
@@ -415,8 +409,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/06/19/Unity/JobSystem/" rel="prev" title="Unity/JobSystem">
-                Unity/JobSystem <i class="fa fa-chevron-right"></i>
+              <a href="/2020/06/22/Unity/OnGUI/" rel="prev" title="Unity/OnGUI">
+                Unity/OnGUI <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -544,7 +538,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Editor-的调用及初始化"><span class="nav-number">1.</span> <span class="nav-text">Editor 的调用及初始化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Editor-界面点击调用静态方法"><span class="nav-number">1.1.</span> <span class="nav-text">Editor 界面点击调用静态方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#菜单栏静态方法"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">菜单栏静态方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Hierachy-或-Project-右键静态方法"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">Hierachy 或 Project 右键静态方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EditorWindow"><span class="nav-number">1.2.</span> <span class="nav-text">EditorWindow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EditorInspector"><span class="nav-number">1.3.</span> <span class="nav-text">EditorInspector</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#界面渲染"><span class="nav-number">1.4.</span> <span class="nav-text">界面渲染</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#资料"><span class="nav-number">1.5.</span> <span class="nav-text">资料</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#综合"><span class="nav-number">1.5.1.</span> <span class="nav-text">综合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#EditorWindow-1"><span class="nav-number">1.5.2.</span> <span class="nav-text">EditorWindow</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#资源管理"><span class="nav-number">1.5.3.</span> <span class="nav-text">资源管理</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#addressable"><span class="nav-number">1.</span> <span class="nav-text">addressable</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#document"><span class="nav-number">2.</span> <span class="nav-text">document</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Unity-Blog"><span class="nav-number">3.</span> <span class="nav-text">Unity Blog</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Input-System"><span class="nav-number">4.</span> <span class="nav-text">Input System</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Asset-Import-Pipeline"><span class="nav-number">5.</span> <span class="nav-text">Asset Import Pipeline</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Render-Pipline"><span class="nav-number">6.</span> <span class="nav-text">Render Pipline</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#SRP"><span class="nav-number">6.1.</span> <span class="nav-text">SRP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#URP"><span class="nav-number">6.2.</span> <span class="nav-text">URP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HDRP"><span class="nav-number">6.3.</span> <span class="nav-text">HDRP</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ECS"><span class="nav-number">7.</span> <span class="nav-text">ECS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hybird-render"><span class="nav-number">8.</span> <span class="nav-text">Hybird render</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HLOD"><span class="nav-number">9.</span> <span class="nav-text">HLOD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Blob-assets"><span class="nav-number">10.</span> <span class="nav-text">Blob assets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Burst"><span class="nav-number">11.</span> <span class="nav-text">Burst</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Odin-Inspector"><span class="nav-number">12.</span> <span class="nav-text">Odin Inspector</span></a></li></ol></div>
             
 
           </div>
